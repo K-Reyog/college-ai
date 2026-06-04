@@ -1,0 +1,1217 @@
+﻿Computer Networks and Data 
+Communication
+
+Module 5
+
+CS 212
+
+Prof. (Dr.) SHAKTI KUNDU
+
+Jan-May 2026
+
+
+
+Module wise CONTENTS:
+ Module 1 - Introduction: An overview of networks, the Internet, services and protocols, RFCs 
+
+and standards of Networking, Data communication & its components, types of data 
+communication and communication channels. Key components of computer network; network 
+devices; types of computer networks; network topology; reference models (Network 
+Architectures) – OSI & TCP/IP.
+
+ Module 2 - Physical Layer: Introduction and functions; types of transmission media – guided 
+and unguided; integrated services digital network (ISDN); asynchronous transfer mode (ATM).
+
+ Module 3 - Data Link Layer: Overview; sliding window protocols - Stop-&-Wait; Go-Back-N,
+Selective Repeat; Error detection and correction; Hamming Code, LRC, VRC, CRC,
+Checksum, Round Trip Time, Latency (Delay); Medium Access Sublayer: medium access
+control (MAC) Addresses; Switching techniques - circuit, message & packet; Random Access
+Protocols - Pure ALOHA, Slotted ALOHA, CSMA / CD, CSMA / CA; Controlled Access
+Protocols – FDMA, TDMA, CDMA; Channelization Protocols – Reservation, Polling, Token
+Passing; Ethernet (802.3 IEEE standard), Wireless Links, Wireless LAN - WiFi (802.11).
+
+ Module 4 - Network Layer: Introduction; address resolution protocol (ARP); internet protocol
+(IP); internet control message protocol (ICMP); internet group management protocol (IGMP);
+IPv4 addressing, representation of IPv6; IPv4 vs IPv6; Conversion IPv4 to IPv6; Routing
+Protocols - routing information protocol (RIP), open shortest path first (OSPF); border gateway
+protocol (BGP); Enhanced Interior Gateway Routing Protocol (EIGRP).
+
+ Module 5 - Transport Layer: Introduction; transport layer protocols - UDP & TCP, TCP
+connection establishment; TCP connection termination; TCP congestion control. Application
+Layer: Introduction – features & functions; application layer protocols; Web and HTTP, Email,
+SMTP, P2P network, its types & applications.
+
+ Module 6 – Network Optimization, Mathematical Models, Introduction Advance Computer
+Networks, MANET, WSN, PCN, SDN, IoT.
+
+
+
+ Module 5 - Transport Layer: Introduction; transport layer protocols - UDP &
+TCP, TCP connection establishment; TCP connection termination; TCP
+congestion control. Application Layer: Introduction – features & functions;
+application layer protocols; Web and HTTP, Email, SMTP, P2P network, its types
+& applications.
+
+
+
+Transport Layer:
+
+Introduction:
+
+ The transport layer is positioned between the network and session layers in the
+
+OSI paradigm.
+
+ The data packets must be taken and sent to the appropriate machine by the
+
+network layer. After that, the transport layer receives the packets, sorts
+
+them, and looks for faults.
+
+ Subsequently, it directs them to the session layer of the appropriate computer
+
+program. Now, the properly structured packets are used by the session layer to
+
+hold the data for the application.
+
+
+
+Transport Layer Protocols:
+
+ Transport Layer Protocol uses different protocol for the better communication
+
+between two ends uses of protocol that may differ from specifications. Below
+
+mention are some protocols used in Transport Layer:
+
+1. Transmission Control Protocol(TCP)
+
+ TCP is connection-oriented Protocol.
+
+ TCP is reliable protocol.
+
+ As TCP is connection-oriented protocol, so first the connection is established
+
+between two ends and then data is transferred and then the connection is
+
+terminated after all data being sent.
+
+
+
+Transport Layer Protocols:
+
+2. User Datagram Protocol (UDP)
+
+ UDP is not reliable protocol
+
+ The protocol UDP is connectionless.
+
+ When speed and size are more important than security and dependability, this
+
+kind of protocol is employed.
+
+ The data from the higher layer is supplemented with transport-level
+
+addresses, checksum error control, and length information by UDP, an end-
+
+to-end transport level protocol.
+
+ A user datagram is the packet that the UDP protocol generates.
+
+
+
+Transport Layer Protocols:
+
+3. Stream Control Transmission Protocol (SCTP)
+
+ An IP Transport Layer protocol is called Stream Control Transmission
+
+Protocol (SCTP).
+
+ Many Internet applications use SCTP to perform transport layer duties,
+
+similar to User Datagram Protocol (UDP) and Transmission Control Protocol
+
+(TCP).
+
+ On top of a connectionless packet network like IP, SCTP is a dependable
+
+transport protocol that facilitates data transfer over the network in scenarios
+
+involving one or more IP addresses.
+
+
+
+Transport Layer Protocols:
+
+ Difference Between TCP and UDP at Transport Layer
+
+TCP UDP
+
+TCP is a connection-oriented protocol UDP is the connection-less protocol
+
+TCP is reliable. UDP is not reliable.
+
+TCP supports error-checking UDP has only the basic error-checking 
+mechanisms. mechanism using checksums.
+
+An acknowledgment segment is present. No acknowledgment segment.
+
+UDP is faster, simpler, and more efficient 
+TCP is slower than UDP
+
+than TCP.
+
+Retransmission of lost packets is possible There is no retransmission of lost packets 
+in TCP, but not in UDP. in the User Datagram Protocol (UDP)
+
+TCP has a (20-60) bytes variable length 
+The header length is fixed of 8 bytes.
+
+header.
+
+
+
+TCP connection establishment:
+
+
+
+TCP connection establishment:
+
+ TCP is a connection-oriented protocol and every connection-oriented protocol
+needs to establish a connection in order to reserve resources at both the
+communicating ends.
+
+ Connection Establishment –
+
+1. Sender starts the process with the following:
+
+ Sequence number (Seq=521): contains the random initial sequence number
+generated at the sender side.
+
+ Syn flag (Syn=1): request the receiver to synchronize its sequence number
+with the above-provided sequence number.
+
+ Maximum segment size (MSS=1460 B): sender tells its maximum segment
+size, so that receiver sends datagram which won’t require any fragmentation.
+MSS field is present inside Option field in TCP header.
+
+ Window size (window=14600 B): sender tells about his buffer capacity in
+which he has to store messages from the receiver.
+
+
+
+TCP connection establishment:
+2. TCP is a full-duplex protocol so both sender and receiver require a window for 
+receiving messages from one another.
+
+ Sequence number (Seq=2000): contains the random initial sequence number 
+generated at the receiver side.
+
+ Syn flag (Syn=1): request the sender to synchronize its sequence number with 
+the above-provided sequence number.
+
+ Maximum segment size (MSS=500 B): receiver tells its maximum segment 
+size, so that sender sends datagram which won’t require any fragmentation. 
+MSS field is present inside Option field in TCP header. 
+
+Since MSSreceiver < MSSsender, both parties agree for minimum MSS i.e., 500 B 
+to avoid fragmentation of packets at both ends.
+
+Therefore, receiver can send maximum of 14600/500 = 29 packets. This is the receiver's sending window size.
+
+ Window size (window=10000 B): receiver tells about his buffer capacity in 
+which he has to store messages from the sender.
+
+Therefore, sender can send a maximum of 10000/500 = 20 packets. This is the sender's sending window size.
+
+ Acknowledgement Number (Ack no.=522): Since sequence number 521 is 
+received by the receiver so, it makes a request for the next sequence number 
+with Ack no.=522 which is the next packet expected by the receiver since Syn 
+flag consumes 1 sequence no.
+
+ ACK flag (ACk=1): tells that the acknowledgement number field contains the 
+next sequence expected by the receiver.
+
+
+
+TCP connection establishment:
+
+3. Sender makes the final reply for connection establishment in the following way:
+
+ Sequence number (Seq=522): since sequence number = 521 in 1st step and 
+SYN flag consumes one sequence number hence, the next sequence number 
+will be 522.
+
+ Acknowledgement Number (Ack no.=2001): since the sender is 
+acknowledging SYN=1 packet from the receiver with sequence number 2000 
+so, the next sequence number expected is 2001.
+
+ ACK flag (ACK=1): tells that the acknowledgement number field contains the 
+next sequence expected by the sender.
+
+Since the connection establishment phase of TCP makes use of 3 packets, it is also 
+known as 3-way Handshaking (SYN, SYN + ACK, ACK). 
+
+
+
+TCP connection termination
+
+ TCP supports two types of connection releases like most connection-oriented 
+transport protocols:
+
+ Graceful connection release
+
+In the Graceful connection release, the connection is open until both parties have
+closed their sides of the connection.
+
+ Abrupt connection release
+
+In an Abrupt connection release, either one TCP entity is forced to close the
+connection or one user closes both directions of data transfer.
+
+
+
+TCP connection termination
+
+Abrupt connection release:
+
+An abrupt connection release is carried out when an RST segment is sent. An
+RST segment can be sent for the below reasons:
+
+ When a non-SYN segment was received for a non-existing TCP connection.
+
+ In an open connection, some TCP implementations send an RST segment
+when a segment with an invalid header is received. This will prevent attacks
+by closing the corresponding connection.
+
+ When some implementations need to close an existing TCP connection, they
+send an RST segment. They will close an existing TCP connection for the
+following reasons:
+
+ Lack of resources to support the connection.
+
+ The remote host is now unreachable and has stopped responding.
+
+When a TCP entity sends an RST segment, it should contain 00 if it does not
+belong to any existing connection else it should contain the current value of the
+sequence number for the connection and the acknowledgment number should be
+set to the next expected in- sequence number on this connection.
+
+
+
+TCP connection termination
+Graceful Connection Release:
+
+ The common way of terminating a TCP connection is by using the TCP
+header’s FIN flag. This mechanism allows each host to release its own side of
+the connection individually.
+
+Step 1 (FIN From Client)
+
+ Suppose that the client application decides it wants to close the connection.
+(Note that the server could also choose to close the connection). This causes
+the client to send a TCP segment with the FIN bit set to 1 to the server and to
+enter the FIN_WAIT_1 state. While in the FIN_WAIT_1 state, the client waits
+for a TCP segment from the server with an acknowledgment (ACK).
+
+
+
+TCP connection termination
+
+Step 2 (ACK From Server)
+
+ When the Server received the FIN bit segment from Sender (Client), Server
+Immediately sends acknowledgement (ACK) segment to the Sender (Client).
+
+Step 3 (Client waiting)
+
+ While in the FIN_WAIT_1 state, the client waits for a TCP segment from the
+server with an acknowledgment. When it receives this segment, the client
+enters the FIN_WAIT_2 state. While in the FIN_WAIT_2 state, the client
+waits for another segment from the server with the FIN bit set to 1.
+
+Step 4 (FIN from Server)
+
+ The server sends the FIN bit segment to the Sender(Client) after some time
+when the Server sends the ACK segment (because of some closing process in
+the Server).
+
+Step 5 (ACK from Client)
+
+ When the Client receives the FIN bit segment from the Server, the client
+acknowledges the server’s segment and enters the TIME_WAIT state. The
+TIME_WAIT state lets the client resend the final acknowledgment in case the
+ACK is lost. The time spent by clients in the TIME_WAIT state depends on
+their implementation, but their typical values are 30 seconds, 1 minute, and 2
+minutes. After the wait, the connection formally closes and all resources on the
+client-side (including port numbers and buffer data) are released.
+
+
+
+TCP Congestion Control
+
+ TCP congestion control is a method used by the TCP protocol to manage data
+flow over a network and prevent congestion. TCP uses a congestion window
+and congestion policy that avoids congestion. Previously, we assumed that
+only the receiver could dictate the sender’s window size. We ignored another
+entity here, the network. If the network cannot deliver the data as fast as it is
+created by the sender, it must tell the sender to slow down. In other words, in
+addition to the receiver, the network is a second entity that determines the size of
+the sender’s window.
+
+ Congestion Policy in TCP
+
+ Slow Start Phase: Starts slow increment is exponential to the threshold.
+
+ Congestion Avoidance Phase: After reaching the threshold increment is by 1.
+
+ Congestion Detection Phase: The sender goes back to the Slow start phase or
+the Congestion avoidance phase.
+
+
+
+TCP Congestion Control
+
+Slow Start Phase
+
+ Exponential Increment: In this phase after every RTT the congestion
+window size increments exponentially.
+
+ Example: If the initial congestion window size is 1 segment, and the first
+segment is successfully acknowledged, the congestion window size becomes 2
+segments. If the next transmission is also acknowledged, the congestion
+window size doubles to 4 segments. This exponential growth continues as long
+as all segments are successfully acknowledged.
+
+Initially cwnd = 1
+After 1 RTT, cwnd = 2^(1) = 2
+2 RTT, cwnd = 2^(2) = 4
+3 RTT, cwnd = 2^(3) = 8
+
+
+
+TCP Congestion Control
+
+Congestion Avoidance Phase
+
+ Additive Increment: This phase starts after the threshold value also denoted
+as ssthresh. The size of CWND (Congestion Window) increases additive.
+After each RTT cwnd = cwnd + 1.
+
+ For example: if the congestion window size is 20 segments and all 20
+segments are successfully acknowledged within an RTT, the congestion
+window size would be increased to 21 segments in the next RTT. If all 21
+segments are again successfully acknowledged, the congestion window size
+will be increased to 22 segments, and so on.
+
+Initially cwnd = i
+After 1 RTT, cwnd = i+1
+2 RTT, cwnd = i+2
+3 RTT, cwnd = i+3
+
+
+
+TCP Congestion Control
+
+Congestion Detection Phase
+
+ Multiplicative Decrement: If congestion occurs, the congestion window size
+is decreased. The only way a sender can guess that congestion has happened is
+the need to retransmit a segment. Retransmission is needed to recover a
+missing packet that is assumed to have been dropped by a router due to
+congestion. Retransmission can occur in one of two cases: when the RTO
+timer times out or when three duplicate ACKs are received.
+
+ Case 1: Retransmission due to Timeout – In this case, the congestion
+possibility is high.
+
+(a) ssthresh is reduced to half of the current window size.
+(b) set cwnd = 1
+(c) start with the slow start phase again.
+
+ Case 2: Retransmission due to 3 Acknowledgement Duplicates – The
+congestion possibility is less.
+
+(a) ssthresh value reduces to half of the current window size.
+(b) set cwnd= ssthresh
+(c) start with congestion avoidance phase
+
+
+
+Practice Problem on TCP layer - 1
+
+ A TCP message consisting of 2100 bytes is passed to IP for delivery across
+two networks. The first network can carry a maximum payload of 1200 bytes
+per frame and the second network can carry a maximum payload of 400 bytes
+per frame, excluding network overhead. Assume that IP overhead per packet is
+20 bytes. What is the total IP overhead in the second network for this
+transmission?
+
+Solution: 20 + 20 + 20 + 20 + 20 + 20 = 120.
+
+
+
+Practice Problem on TCP layer - 2
+
+ Consider three IP networks A, B and C. Host HA in network A sends message
+each containing 180 bytes of application data to a Host HC in network C. The
+TCP Layer prefixes a 20 byte header to the message. This passes through an
+intermediate network B. The maximum packet size, including 20 byte IP
+header, in each network is A: 1000 bytes, B:100 bytes, C: 1000 bytes. The
+network A and B are connected through a 1 Mbps link, while B and C are
+connected by a 512 Kbps link. Assume that the packets are correctly delivered,
+how many bytes, including headers, are delivered to the IP layer at the
+destination for one application message, in the best case. (Consider only data
+packets).
+
+Solution:
+
+260
+
+
+
+Application Layer:
+
+Introduction:
+
+ The Application Layer is topmost layer in the Open System Interconnection (OSI)
+
+model. This layer provides several ways for manipulating the data (information)
+
+which actually enables any type of user to access network with ease.
+
+ This layer also makes a request to its bottom layer, which is presentation layer for
+
+receiving various types of information from it.
+
+ The Application Layer interface directly interacts with application and provides
+
+common web application services.
+
+ This layer is basically highest level of open system, which provides services
+
+directly for application process.
+
+
+
+Functions of Application Layer:
+
+Functions of Application Layer:
+
+ Application Layer provides a facility by which users can forward several emails
+and it also provides a storage facility.
+
+ This layer allows users to access, retrieve and manage files in a remote computer.
+
+ It allows users to log on as a remote host.
+
+ This layer provides access to global information about various services.
+
+ This layer provides services which include: e-mail, transferring files, distributing
+results to the user, directory services, network resources and so on.
+
+ It provides protocols that allow software to send and receive information and
+present meaningful data to users.
+
+ It handles issues such as network transparency, resource allocation and so on.
+
+ This layer serves as a window for users and application processes to access
+network services.
+
+ Application Layer is basically not a function, but it performs application layer
+functions.
+
+
+
+Functions of Application Layer:
+
+ To ensure smooth communication, application layer protocols are implemented
+
+the same on source host and destination host.
+
+ Features provided by Application Layer Protocols:
+
+ The Application Layer protocol defines process for both parties which are
+
+involved in communication.
+
+ These protocols define the type of message being sent or received from any side
+
+(either source host or destination host).
+
+ These protocols also define basic syntax of the message being forwarded or
+
+retrieved.
+
+ These protocols define the way to send a message and the expected response.
+
+ These protocols also define interaction with the next level.
+
+
+
+Application Layer Protocols:
+
+Application Layer Protocols: The application layer provides several protocols which
+
+allow any software to easily send and receive information and present meaningful
+
+data to its users.
+
+The following are some of the protocols which are provided by the application layer.
+
+ TELNET: Telnet stands for Telecommunications Network. This protocol is used
+
+for managing files over the Internet. It allows the Telnet clients to access the
+
+resources of Telnet server. Telnet uses port number 23.
+
+ DNS: DNS stands for Domain Name System. The DNS service translates the
+
+domain name (selected by user) into the corresponding IP address. For
+
+example- If you choose the domain name as www.abcd.com, then DNS must
+
+translate it as 192.36.20.8 (random IP address). DNS protocol uses the port
+
+number 53.
+
+
+
+Application Layer Protocols:
+
+Application Layer Protocols:
+
+ DHCP: DHCP stands for Dynamic Host Configuration Protocol. It provides IP
+
+addresses to hosts. Whenever a host tries to register for an IP address with the
+
+DHCP server, DHCP server provides lots of information to the corresponding
+
+host. DHCP uses port numbers 67 and 68.
+
+ FTP: FTP stands for File Transfer Protocol. This protocol helps to transfer
+
+different files from one device to another. FTP promotes sharing of files via
+
+remote computer devices with reliable, efficient data transfer. FTP uses port
+
+number 20 for data access and port number 21 for data control.
+
+ SMTP: SMTP stands for Simple Mail Transfer Protocol. It is used to transfer
+
+electronic mail from one user to another user. SMTP is used by end users to
+
+send emails with ease. SMTP uses port numbers 25 and 587.
+
+
+
+Application Layer Protocols:
+
+Application Layer Protocols:
+
+ NFS: NFS stands for Network File System. This protocol allows remote hosts to
+
+mount files over a network and interact with those file systems as though
+
+they are mounted locally. NFS uses the port number 2049.
+
+ SNMP: SNMP stands for Simple Network Management Protocol. This protocol
+
+gathers data by polling the devices from the network to the management
+
+station at fixed or random intervals, requiring them to disclose certain
+
+information. SNMP uses port numbers 161 (TCP) and 162 (UDP).
+
+ HTTP: HTTP stands for Hyper Text Transfer Protocol. It is the foundation of the
+World Wide Web (WWW). HTTP works on the client server model. This
+protocol is used for transmitting hypermedia documents like HTML. This
+protocol was designed particularly for the communications between the web
+browsers and web servers, but this protocol can also be used for several other
+purposes. HTTP is a stateless protocol (network protocol in which a client sends
+requests to server and server responses back as per the given state), which means
+the server is not responsible for maintaining the previous client’s requests. HTTP
+uses port number 80.
+
+
+
+Application Layer: Web and HTTP
+
+Web - Introduction:
+
+ The World Wide Web (WWW), often called the Web, is a system of
+
+interconnected webpages and information that you can access using the Internet.
+
+It was created to help people share and find information easily, using links
+
+that connect different pages together. The Web allows us to browse websites,
+
+watch videos, shop online, and connect with others around the world through our
+
+computers and phones.
+
+ From the user’s point of view, the web consists of a vast, worldwide connection
+
+of documents or web pages. Each page may contain links to other pages anywhere
+
+in the world. The pages can be retrieved and viewed by using browsers of which
+
+internet explorer, Netscape Navigator, Google Chrome, etc. are the popular ones.
+
+The browser fetches the page requested interprets the text and formatting
+
+commands on it, and displays the page, properly formatted, on the screen.
+
+
+
+Application Layer: Web and HTTP
+
+Web – System Architecture:
+
+ The browser is displaying a web page on the client machine. When the user clicks
+
+on a line of text that is linked to a page on the abd.com server, the browser
+
+follows the hyperlink by sending a message to the abd.com server asking it for the
+
+page.
+
+
+
+Application Layer: Web and HTTP
+
+Features of WWW:
+
+ WWW is open source.
+
+ It is a distributed system spread across various websites.
+
+ It is a Hypertext Information System.
+
+ It is Cross-Platform.
+
+ Uses Web Browsers to provide a single interface for many services.
+
+ Dynamic, Interactive and Evolving.
+
+Components of the Web
+
+There are 3 components of the web:
+
+ Uniform Resource Locator (URL): URL serves as a system for resources on the
+web.
+
+ Hyper Text Transfer Protocol (HTTP): HTTP specifies communication of
+browser and server.
+
+ Hyper Text Markup Language (HTML): HTML defines the structure,
+organisation and content of a web page.
+
+
+
+Application Layer: Web and HTTP
+
+ Difference between WWW and Internet:
+
+WWW Internet
+
+It is originated in 1989. It is originated in 1960.
+
+WWW is an interconnected network of 
+Internet is used to connect a computer 
+
+websites and documents that can be 
+with other computer .
+
+accessed via the Internet.
+
+WWW used protocols such as HTTP Internet used protocols such as TCP/IP
+
+It is based on software. It is based on hardware.
+
+It is a service contained inside an There is a entire infrastructure in 
+infrastructure. internet.
+
+
+
+Application Layer: Web and HTTP
+
+HTTP - Introduction:
+
+ HTTP stands for HyperText Transfer Protocol. It is the main way web browsers
+
+and servers communicate to share information on the internet. Tim Berner
+
+invents it. HyperText is the type of text that is specially coded with the help of
+
+some standard coding language called HyperText Markup Language (HTML).
+
+HTTP/2 is the new version of HTTP. HTTP/3 is the latest version of HTTP,
+
+which is published in 2022.
+
+ When you visit a website, HTTP helps your browser request and receive the
+
+data needed to display the web pages you see. It is a fundamental part of how
+
+the internet works, making it possible for us to browse and interact with websites.
+
+
+
+Application Layer: Web and HTTP
+
+Working of HTTP [HyperText Transfer Protocol]
+
+ Whenever we want to open any website we first open a web browser after that we
+
+will type the URL of that website (e.g., www.facebook.com ). This URL is now
+
+sent to the Domain Name Server (DNS). Then DNS first checks records for this
+
+URL in their database, and then DNS will return the IP address to the web
+
+browser corresponding to this URL. Now the browser is able to send requests to
+
+the actual server.
+
+ After the server sends data to the client, the connection will be closed. If we want
+
+something else from the server we should have to re-establish the connection
+
+between the client and the server.
+
+
+
+Application Layer: Web and HTTP
+
+HTTP request is simply termed as the information or data that is needed by
+Internet browsers for loading a website. This is simply known as HTTP Request.
+
+ There is some common information that is generally present in all HTTP requests.
+These are mentioned below:
+
+ HTTP Version
+
+ URL
+
+ HTTP Method
+
+ HTTP Request Headers
+
+ HTTP Body
+
+ HTTP Request Headers generally store information in the form of key-value and
+must be present in each HTTP Request. The use of this Request Header is to
+provide core information about the client’s information, etc.
+
+ HTTP Request Body simply contains the information that has to be transferred.
+HTTP Request has the information or data to be sent to these browsers.
+
+ HTTP Methods are simply HTTP Verb. In spite of being present so many HTTP
+Methods, the most common HTTP Methods are HTTP GET and HTTP POST.
+These two are generally used in HTTP cases. In HTTP GET, the information is
+received in the form of a website.
+
+
+
+Application Layer: Web and HTTP 
+
+ HTTP Response is simply the answer to what a Server gets when the request
+
+is raised. There are various things contained in HTTP Response, some of them
+
+are listed below:
+
+ HTTP Status Code
+
+ HTTP Headers
+
+ HTTP Body
+
+ HTTP Response headers are simply like an HTTP Request where it has that work
+
+to send some important files and data to the HTTP Response Body.
+
+ HTTP Responses body are the responses that are received successfully upon the
+
+request. Generally, it comes under the requests generated by the web. In most
+
+cases, the request is to transfer the HTML data into a webpage.
+
+
+
+Application Layer: Web and HTTP
+
+ HTTP Status Codes are the 3-digit codes that tell the message or simply tell us
+
+about the HTTP Request whether it has been completed or not. There are simply 5
+
+types of status codes:
+
+ Informational responses (100–199)
+
+ Successful responses (200–299)
+
+ Re-directional (300–399)
+
+ Client-Error (400–499)
+
+ Server-Error (500–599)
+
+
+
+Practice Problem on HTTP server
+
+ An IP machine Q has a path to another IP machine H via three IP routers R1,
+R2 and R3.
+
+Q – R1 – R2 – R3 – H
+
+H acts as an HTTP server, and Q connect to H via HTTP and download a file.
+Session layer encryption is used, with DES as the shared key encryption
+protocol. Consider the following four pieces of information:
+
+[I1] The URL of the file downloaded by Q
+
+[I2] The TCP port numbers at Q and H
+
+[I3] The IP addresses of Q and H
+
+[I4] The link layer addresses of Q and H
+
+Which of I1, I2, I3, and I4 can an intruder learn through sniffing at R2 alone?
+
+Solution:
+
+Only I2 and I3
+
+
+
+Practice Problem on HTTP server
+
+ Solution / Description: Only I2 and I3
+
+[I1] The URL of the file downloaded by Q
+
+The intruder cannot see the URL because it is encrypted by the DES at the session 
+layer.
+
+[I2] The TCP port numbers at Q and H
+
+The TCP port number can be seen by the intruder because we have TCP packet 
+which include TCP header that contain both source and destination TCP port 
+numbers.
+
+[I3] The IP addresses of Q and H
+
+The intruder can see because network layer, header contain IP addresses both 
+source and destination .
+
+[I4] The link layer addresses of Q and H
+
+At Q, we are putting the address of R1 and Q & R1 will be having address of only 
+Q. The intruder at R2 can see the address of R1; R3 only but not the address of Q; 
+H (source and destination). Hence, intruder cannot see.
+
+
+
+Application Layer: Email
+
+E-mail - Introduction:
+
+ Electronic Mail (e-mail) is one of most widely used services of Internet. This
+
+service allows an Internet user to send a message in formatted manner (mail)
+
+to the other Internet user in any part of world. Message in mail not only
+
+contain text, but it also contains images, audio and videos data. The person who is
+
+sending mail is called sender and person who receives mail is called recipient. It is
+
+just like postal mail service.
+
+ Components of E-Mail System: The basic components of an email system are:
+
+User Agent (UA), Message Transfer Agent (MTA), Mail Box, and Spool file.
+
+
+
+Application Layer: Email
+
+Components of E-Mail System:
+
+ User Agent (UA): The UA is normally a program which is used to send and
+receive mail. Sometimes, it is called as mail reader. It accepts variety of
+commands for composing, receiving and replying to messages as well as for
+manipulation of the mailboxes.
+
+ Message Transfer Agent (MTA): MTA is actually responsible for transfer of
+mail from one system to another. To send a mail, a system must have client
+MTA and system MTA. It transfer mail to mailboxes of recipients if they are
+connected in the same machine. It delivers mail to peer MTA if destination
+mailbox is in another machine. The delivery from one MTA to another MTA is
+done by Simple Mail Transfer Protocol.
+
+
+
+Application Layer: Email
+
+Components of E-Mail System:
+
+ Mailbox: It is a file on local hard drive to collect mails. Delivered mails are
+
+present in this file. The user can read it delete it according to his/her requirement.
+
+To use e-mail system each user must have a mailbox. Access to mailbox is only to
+
+owner of mailbox.
+
+ Spool file: This file contains mails that are to be sent. User agent appends
+
+outgoing mails in this file using SMTP. MTA extracts pending mail from spool
+
+file for their delivery. E-mail allows one name, an alias, to represent several
+
+different e-mail addresses. It is known as mailing list, Whenever user have to sent
+
+a message, system checks recipient’s name against alias database. If mailing list is
+
+present for defined alias, separate messages, one for each entry in the list, must be
+
+prepared and handed to MTA. If for defined alias, there is no such mailing list is
+
+present, name itself becomes naming address and a single message is delivered to
+
+mail transfer entity.
+
+
+
+Application Layer: Email
+
+Services provided by E-mail system:
+
+ Composition – The composition refer to process that creates messages and
+
+answers. For composition any kind of text editor can be used.
+
+ Transfer – Transfer means sending procedure of mail i.e. from the sender to
+
+recipient.
+
+ Reporting – Reporting refers to confirmation for delivery of mail. It help user to
+
+check whether their mail is delivered, lost or rejected.
+
+ Displaying – It refers to present mail in form that is understand by the user.
+
+ Disposition – This step concern with recipient that what will recipient do after
+
+receiving mail i.e., save mail, delete before reading or delete after reading.
+
+
+
+SMTP
+
+Simple Mail Transfer Protocol (SMTP):
+
+ SMTP (Simple Mail Transfer Protocol) is a standard protocol used in computer
+
+networks for sending and transferring email messages across the Internet. It
+
+operates at the application layer of the TCP/IP model and is responsible for
+
+transmitting emails from a sender’s mail server to the recipient’s mail server.
+
+SMTP typically uses TCP port 25 for communication, while port 587 is
+
+commonly used for secure email submission.
+
+ SMTP follows a client–server model. The email sending process begins when a
+
+user composes a message using a User Agent (UA) such as an email client or
+
+webmail service. When the user sends the message, the email client connects to an
+
+SMTP server and transfers the message using the SMTP protocol.
+
+
+
+SMTP
+
+Simple Mail Transfer Protocol (SMTP):
+
+ The SMTP server then processes the recipient’s email address to determine the
+
+destination mail server. It forwards the message through the network using a Mail
+
+Transfer Agent (MTA) until it reaches the recipient’s mail server. Once the
+
+message arrives, it is stored in the recipient’s mailbox by a Mail Delivery Agent
+
+(MDA).
+
+ SMTP uses a set of text-based commands to communicate between servers.
+
+Common commands include HELO/EHLO to initiate communication, MAIL
+
+FROM to specify the sender’s address, RCPT TO to specify the recipient’s
+
+address, DATA to transmit the email content, and QUIT to terminate the session.
+
+
+
+SMTP
+
+Simple Mail Transfer Protocol (SMTP):
+
+ It is important to note that SMTP is used only for sending emails, not for
+
+retrieving them. Email retrieval is handled by other protocols such as POP3 (Post
+
+Office Protocol) and IMAP (Internet Message Access Protocol).
+
+ In summary, SMTP plays a crucial role in email communication by enabling
+
+reliable transmission of messages between mail servers across computer
+
+networks.
+
+
+
+Application Layer: P2P network 
+
+ A peer-to-peer network is a simple network of computers. It first came into
+
+existence in the late 1970s.
+
+ Here each computer acts as a node for file sharing within the formed
+
+network. Also, each node acts as a server and thus there is no central server
+
+in the network. This allows the sharing of a huge amount of data.
+
+ The tasks are equally divided amongst the nodes. Each node connected in the
+
+network shares an equal workload. For the network to stop working, all the nodes
+
+need to individually stop working. This is because each node works
+
+independently.
+
+
+
+Application Layer: P2P network
+
+Types of P2P networks:
+
+ Unstructured P2P networks: In this type of P2P network, each device is able to
+make an equal contribution. This network is easy to build as devices can be
+connected randomly in the network. But being unstructured, it becomes difficult
+to find content. For example, Napster, Gnutella, etc.
+
+ Structured P2P networks: It is designed using software that creates a virtual layer
+in order to put the nodes in a specific structure. These are not easy to set up but
+can give easy access to users to the content. For example, P-Grid, Kademlia, etc.
+
+ Hybrid P2P networks: It combines the features of both P2P networks and client-
+server architecture. An example of such a network is to find a node using the
+central server.
+
+Features of P2P network:
+
+ These networks do not involve a large number of nodes, usually less than 12. All
+the computers in the network store their own data but this data is accessible by the
+group.
+
+ Unlike client-server networks, P2P uses resources and also provides them. This
+results in additional resources if the number of nodes increases. It requires
+specialized software. It allows resource sharing among the network.
+
+ Since the nodes act as clients and servers, there is a constant threat of attack.
+
+ Almost all OS today support P2P networks.
+
+
+
+Application Layer: P2P network 
+
+ P2P Network Architecture:
+
+In the P2P network architecture, the computers connect with each other in a
+
+workgroup to share files, and access to internet and printers.
+
+ Each computer in the network has the same set of responsibilities and capabilities.
+
+ Each device in the network serves as both a client and server.
+
+ The architecture is useful in residential areas, small offices, or small companies
+
+where each computer act as an independent workstation and stores the data on its
+
+hard drive.
+
+ Each computer in the network has the ability to share data with other computers in
+
+the network.
+
+ The architecture is usually composed of workgroups of 12 or more computers.
+
+
+
+Application Layer: P2P Applications 
+
+ Applications of P2P Network:
+
+ File sharing: P2P network is the most convenient, cost-efficient method for file
+
+sharing for businesses. Using this type of network there is no need for
+
+intermediate servers to transfer the file.
+
+ Blockchain: The P2P architecture is based on the concept of decentralization.
+
+When a peer-to-peer network is enabled on the blockchain it helps in the
+
+maintenance of a complete replica of the records ensuring the accuracy of the data
+
+at the same time. At the same time, peer-to-peer networks ensure security also.
+
+ Direct messaging: P2P network provides a secure, quick, and efficient way to
+
+communicate. This is possible due to the use of encryption at both the peers and
+
+access to easy messaging tools.
+
+ Collaboration: The easy file sharing also helps to build collaboration among other
+
+peers in the network.
+
+
+
+Application Layer: P2P Applications 
+
+Applications of P2P Network:
+
+ File sharing networks: Many P2P file sharing networks like G2, and eDonkey
+
+have popularized peer-to-peer technologies.
+
+ Content distribution: In a P2P network, unline the client-server system so the
+
+clients can both provide and use resources. Thus, the content serving capacity of
+
+the P2P networks can actually increase as more users begin to access the content.
+
+ IP Telephony: Skype is one good example of a P2P application in VoIP.
+
+
+
+Prof. Dr. SHAKTI KUNDU
+
+Computer Networks and Data Communication
+
+2026

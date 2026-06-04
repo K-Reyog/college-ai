@@ -1,0 +1,587 @@
+﻿Computer Networks and Data 
+Communication
+
+Module 6
+
+CS 212
+
+Prof. (Dr.) SHAKTI KUNDU
+
+Jan-May 2026
+
+
+
+Module wise CONTENTS:
+ Module 1 - Introduction: An overview of networks, the Internet, services and protocols, RFCs 
+
+and standards of Networking, Data communication & its components, types of data 
+communication and communication channels. Key components of computer network; network 
+devices; types of computer networks; network topology; reference models (Network 
+Architectures) – OSI & TCP/IP.
+
+ Module 2 - Physical Layer: Introduction and functions; types of transmission media – guided 
+and unguided; integrated services digital network (ISDN); asynchronous transfer mode (ATM).
+
+ Module 3 - Data Link Layer: Overview; sliding window protocols - Stop-&-Wait; Go-Back-N,
+Selective Repeat; Error detection and correction; Hamming Code, LRC, VRC, CRC,
+Checksum, Round Trip Time, Latency (Delay); Medium Access Sublayer: medium access
+control (MAC) Addresses; Switching techniques - circuit, message & packet; Random Access
+Protocols - Pure ALOHA, Slotted ALOHA, CSMA / CD, CSMA / CA; Controlled Access
+Protocols – FDMA, TDMA, CDMA; Channelization Protocols – Reservation, Polling, Token
+Passing; Ethernet (802.3 IEEE standard), Wireless Links, Wireless LAN - WiFi (802.11).
+
+ Module 4 - Network Layer: Introduction; address resolution protocol (ARP); internet protocol
+(IP); internet control message protocol (ICMP); internet group management protocol (IGMP);
+IPv4 addressing, representation of IPv6; IPv4 vs IPv6; Conversion IPv4 to IPv6; Routing
+Protocols - routing information protocol (RIP), open shortest path first (OSPF); border gateway
+protocol (BGP); Enhanced Interior Gateway Routing Protocol (EIGRP).
+
+ Module 5 - Transport Layer: Introduction; transport layer protocols - UDP & TCP, TCP
+connection establishment; TCP connection termination; TCP congestion control. Application
+Layer: Introduction – features & functions; application layer protocols; Web and HTTP, Email,
+P2P network, its types & applications.
+
+ Module 6 – Network Optimization, Mathematical Models, Introduction Advance Computer
+Networks, MANET, WSN, PCN, SDN, IoT.
+
+
+
+ Module 6 – Network Optimization, Mathematical Models, Introduction Advance
+Computer Networks, MANET, WSN, PCN, SDN, IoT.
+
+
+
+Network Optimization:
+
+ Network optimization refers to the set of techniques and strategies used to
+
+improve the performance, efficiency, reliability, and speed of a computer
+
+network. The goal is to ensure data moves through the network as quickly and
+
+smoothly as possible while using resources efficiently.
+
+Key Goals of Network Optimization
+
+ Reduce latency – minimize delays in data transmission.
+
+ Increase throughput – maximize the amount of data transferred over time.
+
+ Balance network load – avoid congestion and uneven traffic distribution.
+
+ Ensure reliability – maintain stable, fault-tolerant network operations.
+
+ Improve resource usage – optimize bandwidth, routing, and hardware use.
+
+
+
+Network Optimization:
+
+Techniques Used in Network Optimization
+
+1. Traffic Analysis & Monitoring
+
+ Monitoring tools (e.g., NetFlow, Wireshark) help identify bottlenecks and 
+
+unusual traffic patterns.
+
+2. Load Balancing
+
+ Distributes traffic across multiple servers or paths to prevent overload.
+
+3. QoS (Quality of Service)
+
+ Prioritizes critical applications (video conferencing, VoIP) over less 
+
+urgent traffic.
+
+4. Caching
+
+ Stores frequently accessed data closer to users to reduce retrieval 
+
+time.
+
+
+
+Network Optimization:
+
+Techniques Used in Network Optimization
+
+5. Compression
+
+ Compresses data payloads to speed up transmission.
+
+6. Routing Optimization
+
+ Uses algorithms to find the fastest and least-congested paths for data (e.g., 
+
+OSPF, BGP tuning).
+
+7. Bandwidth Management
+
+ Limits or allocates bandwidth to prevent congestion from specific apps.
+
+8. Network Design Optimization
+
+ Improving topology—like using redundant links, segmenting networks 
+
+(VLANs), or placing servers strategically.
+
+
+
+Network Optimization:
+
+ Tools Commonly Used
+
+ Cisco DNA Center
+
+ SolarWinds Network Performance Monitor
+
+ Nagios
+
+ Wireshark
+
+ NetFlow analyzers
+
+ Benefits of Network Optimization
+
+ Faster data transfer
+
+ Better application performance
+
+ Improved user experience
+
+ Lower operational costs
+
+ Enhanced network stability and security
+
+
+
+Mathematical Models
+
+ Mathematical models are formal frameworks used to analyze, predict, and
+optimize the behavior and performance of computer networks. They help
+engineers understand how networks behave under various conditions and guide
+the design of efficient and reliable communication systems.
+
+ Mathematical models allow us to:
+
+ Predict network performance before deployment
+
+ Analyze congestion, delay, throughput, and packet loss
+
+ Optimize routing and resource allocation
+
+ Improve reliability and fault tolerance
+
+ Evaluate protocols and algorithms analytically
+
+
+
+MajMor Taytphees mof Mataithceamla tMicaol Mdoedlesls in Computer Networks
+
+1. Graph Theory Models
+
+ Used to represent network topology.
+
+ Nodes → routers, switches, hosts
+
+ Edges → communication links
+
+Applications:
+
+ Shortest path routing (Dijkstra, Bellman-Ford)
+
+ Network connectivity & reliability
+
+ Minimum spanning tree (MST)
+
+ Load balancing and path optimization
+
+2. Queueing Theory Models
+
+ Used to analyze packet arrival, waiting time, and service time.
+
+ Common models:
+
+ M/M/1 queue → single server, exponential arrival & service
+
+ M/M/c queue → multiple servers
+
+ M/G/1 queue → general service distribution
+
+Applications:
+
+ Delay estimation
+
+ Buffer sizing
+
+ Congestion analysis
+ Performance of routers/switches
+
+
+
+MajMor Taytphees mof Mataithceamla tMicaol Mdoedlesls in Computer Networks
+
+3. Probability & Stochastic Models
+
+ Used for modeling randomness in:
+
+ Traffic arrival
+
+ Packet loss
+
+ Radio signal variability
+
+ User behavior
+
+ Examples:
+
+ Markov chains
+
+ Poisson processes
+
+ Random walks
+
+4. Optimization Models
+
+ Used for maximizing/minimizing network performance metrics.
+
+ Optimized metrics:
+
+ Bandwidth usage
+
+ Energy consumption
+
+ Routing cost
+
+ Network reliability
+
+ Techniques include:
+
+ Linear programming
+
+ Integer programming
+
+
+
+Mathematical Models
+
+Major Types of Mathematical Models in Computer Networks
+
+5. Simulation Models
+
+ Mathematical + algorithmic modeling using tools like:
+
+ NS-3
+
+ OPNET
+
+ OMNeT++
+
+ Used when analytical models are too complex.
+
+ 6. Traffic Models
+
+ Used to characterize and predict network traffic patterns.
+
+ Deterministic traffic models
+
+ Stochastic traffic models
+
+ Self-similar (long-range dependence) models
+
+ Applications:
+
+ Bandwidth planning
+
+ QoS engineering
+
+ Congestion control
+
+
+
+Mathematical Models
+
+ Benefits of Mathematical Models
+
+ Better understanding of network behavior
+
+ Improved design and planning
+
+ Predictable performance
+
+ Helps troubleshoot bottlenecks
+
+ Reduces overall cost and complexity
+
+
+
+Introduction Advance Computer Networks
+
+ Advanced Computer Networks focus on the design, analysis, implementation,
+and optimization of large-scale, high-performance communication systems.
+These networks go beyond basic connectivity, supporting high-speed data
+transfer, intelligent routing, automation, security, and global-scale
+communication.
+
+ Advanced Computer Networks are modern communication systems that
+incorporate sophisticated technologies, such as:
+
+ High-speed broadband and fiber-optic systems
+
+ Wireless and mobile networks (4G/5G/6G)
+
+ Software-Defined Networking (SDN)
+
+ Network Function Virtualization (NFV)
+
+ Cloud and edge networking
+
+ IoT and sensor networks
+
+ AI-driven network management
+
+ These networks are designed to handle massive traffic loads, ensure reliability,
+minimize latency, and allow automation.
+
+
+
+Introduction Advance Computer Networks
+
+Key Features of Advanced Computer Networks
+
+1. High Performance
+
+ Supports gigabit to terabit data rates with low latency and efficient routing.
+
+2. Scalability
+
+ Networks expand easily to accommodate millions of connected devices.
+
+3. Security
+
+ Advanced encryption, intrusion detection, firewalls, and authentication.
+
+4. Automation
+
+ AI/ML and SDN enable automatic configuration and optimization.
+
+5. Reliability & Fault Tolerance
+
+ Redundant paths, dynamic routing, and load balancing ensure uninterrupted 
+service.
+
+
+
+Introduction Advance Computer Networks
+
+Core Concepts in Advanced Networks
+
+1. Network Architecture
+
+ Layered architecture, protocol stacks, and network topologies.
+
+2. Routing & Switching
+
+ Advanced algorithms (e.g., OSPF, BGP), MPLS, and traffic engineering.
+
+3. Wireless & Mobile Communication
+
+ Radio frequency handling, mobility management, handoff techniques.
+
+4. Cloud & Edge Networks
+
+ Distributed computing and content delivery networks (CDNs).
+
+5. Virtualization
+
+ SDN and NFV separate network functions from hardware, enabling 
+flexibility.
+
+
+
+MANET, WSN, PCN, SDN, IoT
+
+MANET, WSN, PCN, SDN, IoT
+
+ These are key advanced networking paradigms used in modern communication 
+systems. Each represents a different type of network architecture designed for 
+specific use-cases such as mobility, sensing, virtualization, or large-scale 
+connectivity.
+
+1. MANET (Mobile Ad-hoc Network)
+
+ A MANET is a self-configuring, infrastructure-less wireless network where 
+each node acts as both a host and a router.
+
+Key Features
+
+ Nodes are mobile
+
+ Dynamic topology
+
+ No centralized control
+
+ Multi-hop communication
+
+Applications
+
+ Disaster recovery
+
+ Military communication
+
+ Vehicular networks (VANET)
+
+ Temporary event networks
+
+
+
+MANET, WSN, PCN, SDN, IoT
+
+2. WSN (Wireless Sensor Network)
+
+ WSNs consist of sensor nodes that collect, transmit, and process data about 
+environmental conditions.
+
+Characteristics
+
+ Low power, limited memory
+
+ Dense deployment
+
+ Multi-hop routing
+
+ Energy-efficient communication
+
+Applications
+
+ Agriculture monitoring
+
+ Industrial automation
+
+ Health monitoring
+
+ Smart homes and smart cities
+
+
+
+MANET, WSN, PCN, SDN, IoT
+
+3. PCN (Pervasive Computing Network)
+
+ PCNs are networks enabling ubiquitous computing, where devices embedded in 
+the environment communicate seamlessly.
+
+Key Ideas
+
+ Context-aware communication
+
+ Invisible computing
+
+ Integration of heterogeneous devices
+
+Applications
+
+ Smart environments
+
+ Wearable devices
+
+ Intelligent transportation
+
+ Ambient assisted living
+
+
+
+MANET, WSN, PCN, SDN, IoT
+
+4. SDN (Software-Defined Networking)
+
+ SDN separates the control plane (decision making) from the data plane (packet
+forwarding), enabling centralized network management.
+
+Important Features
+
+ Programmable network
+
+ Centralized controller
+
+ Dynamic traffic engineering
+
+ Suitable for cloud & data centers
+
+Advantages
+
+ Flexibility
+
+ Reduced complexity
+
+ Rapid innovation (via controllers like OpenFlow)
+
+
+
+MANET, WSN, PCN, SDN, IoT
+
+5. IoT (Internet of Things)
+
+ IoT is a network of interconnected physical devices that collect and exchange 
+data.
+
+Characteristics
+
+ Massive number of devices
+
+ Heterogeneous communication
+
+ Cloud/edge connectivity
+
+ Real-time monitoring
+
+Applications
+
+ Smart homes
+
+ Industrial IoT (IIoT)
+
+ Healthcare IoT
+
+ Smart grid & smart cities
+
+
+
+MANET, WSN, PCN, SDN, IoT
+
+Acronym Full Form Key Feature Typical Use-Case
+
+Mobile, Military, disaster 
+MANET Mobile Ad-hoc Network
+
+infrastructure-less recovery
+
+Sensing & Agriculture, 
+WSN Wireless Sensor Network
+
+monitoring environment
+
+Pervasive Computing 
+PCN Ubiquitous devices Smart environments
+
+Network
+
+Software-Defined Programmable, 
+SDN Data centers, cloud
+
+Networking centralized
+
+Connected physical Smart homes, 
+IoT Internet of Things
+
+devices industries
+
+
+
+Prof. Dr. SHAKTI KUNDU
+
+Computer Networks and Data Communication
+
+2026

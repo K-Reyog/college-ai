@@ -1,0 +1,1162 @@
+﻿Computer Networks and Data 
+Communication
+
+Module 3
+
+CS 212
+
+Prof. (Dr.) SHAKTI KUNDU
+
+Jan-May 2026
+
+
+
+Module wise CONTENTS:
+ Module 1 - Introduction: An overview of networks, the Internet, services and protocols, RFCs 
+
+and standards of Networking, Data communication & its components, types of data 
+communication and communication channels. Key components of computer network; network 
+devices; types of computer networks; network topology; reference models (Network 
+Architectures) – OSI & TCP/IP.
+
+ Module 2 - Physical Layer: Introduction and functions; types of transmission media – guided 
+and unguided; integrated services digital network (ISDN); asynchronous transfer mode (ATM).
+
+ Module 3 - Data Link Layer: Overview; sliding window protocols - Stop-&-Wait; Go-Back-N,
+Selective Repeat; Error detection and correction; Hamming Code, LRC, VRC, CRC,
+Checksum, Round Trip Time, Latency (Delay); Medium Access Sublayer: medium access
+control (MAC) Addresses; Switching techniques - circuit, message & packet; Random Access
+Protocols - Pure ALOHA, Slotted ALOHA, CSMA / CD, CSMA / CA; Controlled Access
+Protocols – FDMA, TDMA, CDMA; Channelization Protocols – Reservation, Polling, Token
+Passing; Ethernet (802.3 IEEE standard), Wireless Links, Wireless LAN - WiFi (802.11).
+
+ Module 4 - Network Layer: Introduction; address resolution protocol (ARP); internet protocol
+(IP); internet control message protocol (ICMP); internet group management protocol (IGMP);
+IPv4 addressing, representation of IPv6; IPv4 vs IPv6; Conversion IPv4 to IPv6; Routing
+Protocols - routing information protocol (RIP), open shortest path first (OSPF); border gateway
+protocol (BGP); Enhanced Interior Gateway Routing Protocol (EIGRP).
+
+ Module 5 - Transport Layer: Introduction; transport layer protocols - UDP & TCP, TCP
+connection establishment; TCP connection termination; TCP congestion control. Application
+Layer: Introduction – features & functions; application layer protocols; Web and HTTP, Email,
+P2P network, its types & applications.
+
+ Module 6 – Network Optimization, Mathematical Models, Introduction Advance Computer
+Networks, MANET, WSN, PCN, SDN, IoT.
+
+
+
+ Module 3 - Data Link Layer: Overview; sliding window protocols - Stop-&-
+Wait; Go-Back-N, Selective Repeat; Error detection and correction; Hamming
+Code, LRC, VRC, CRC, Checksum, Round Trip Time, Latency (Delay);
+Medium Access Sublayer: medium access control (MAC) Addresses;
+Switching techniques - circuit, message & packet; Random Access Protocols -
+Pure ALOHA, Slotted ALOHA, CSMA / CD, CSMA / CA; Controlled Access
+Protocols – FDMA, TDMA, CDMA; Channelization Protocols – Reservation,
+Polling, Token Passing; Ethernet (802.3 IEEE standard), Wireless Links,
+Wireless LAN - WiFi (802.11).
+
+
+
+Data Link Layer
+
+ The data link layer is the second layer from the bottom in the OSI (Open
+
+System Interconnection) network architecture model.
+
+ It is responsible for the node-to-node delivery of data. Its major role is to
+
+ensure error-free transmission of information.
+
+ DLL is also responsible for encoding, decoding, and organizing the outgoing
+
+and incoming data.
+
+ This is considered the most complex layer of the OSI model as it hides all the
+
+underlying complexities of the hardware from the other above layers.
+
+
+
+Sub-layers of Data Link Layer
+
+Sub-Layers of The Data Link Layer
+
+ The data link layer is further divided into two sub-layers, which are as follows:
+
+Logical Link Control (LLC)
+
+ This sublayer of the data link layer deals with multiplexing, the flow of data
+
+among applications and other services, and LLC is responsible for providing
+
+error messages and acknowledgments as well.
+
+Media Access Control (MAC)
+
+ MAC sublayer manages the device’s interaction, responsible for addressing
+
+frames, and also controls physical media access.
+
+ The data link layer receives the information in the form of packets from the
+
+Network layer, it divides packets into frames and sends those frames bit-by-bit
+
+to the underlying physical layer.
+
+
+
+Functions of The Data-link Layer
+
+Functions of The Data-link Layer: There are various benefits of data link layers, 
+
+such as:
+
+Framing
+
+ The packet received from the Network layer is known as a frame in the Data
+
+link layer. At the sender’s side, DLL receives packets from the Network layer
+
+and divides them into small frames, then, sends each frame bit-by-bit to the
+
+physical layer. It also attaches some special bits (for error control and
+
+addressing) at the header and end of the frame. At the receiver’s end, DLL
+
+takes bits from the Physical layer organizes them into the frame and sends
+
+them to the Network layer.
+
+
+
+Functions of The Data-link Layer
+
+Functions of The Data-link Layer: There are various benefits of data link layers, 
+
+such as:
+
+Addressing
+
+ The data link layer encapsulates the source and destination’s MAC address /
+
+physical address in the header of each frame to ensure node-to-node delivery.
+
+MAC address is the unique hardware address that is assigned to the device
+
+while manufacturing.
+
+
+
+Functions of The Data-link Layer
+
+Error Control
+
+ Data can get corrupted due to various reasons like noise, attenuation, etc. So, it
+
+is the responsibility of the data link layer, to detect the error in the transmitted
+
+data and correct it using error detection and correction techniques respectively.
+
+DLL adds error detection bits into the frame’s header, so that receiver can
+
+check received data is correct or not. It adds reliability to physical layer by
+
+adding mechanism to detect and retransmit damaged or lost frames.
+
+Flow Control
+
+ If the receiver’s receiving speed is lower than the sender’s sending speed, then
+
+this can lead to an overflow in the receiver’s buffer and some frames may get
+
+lost. So, it’s the responsibility of DLL to synchronize the sender’s and
+
+receiver’s speeds and establish flow control between them.
+
+
+
+Functions of The Data-link Layer
+
+Access Control
+
+ When multiple devices share the same communication channel there is a high
+
+probability of collision, so it’s the responsibility of DLL to check which device
+
+has control over the channel and CSMA/CD and CSMA/CA can be used to
+
+avoid collisions and loss of frames in the channel.
+
+
+
+Protocols in the Data-link Layer
+
+Protocols in Data link layer
+
+ There are various protocols in the data link layer, which are as follows:
+
+ Synchronous Data Link Protocol (SDLC)
+
+ High-Level Data Link Protocol (HDLC)
+
+ Serial Line Interface Protocol (SLIP)for encoding
+
+ Point to Point Protocol (PPP)
+
+ Link Access Procedure (LAP)
+
+ Link Control Protocol (LCP)
+
+ Network Control Protocol (NCP)
+
+
+
+Flow Control
+
+
+
+Flow Control
+
+
+
+Flow Control
+
+
+
+Flow Control
+
+Advantage:
+
+ Simplicity
+
+Disadvantage:
+
+ For example, if there are 1000 packets, then it cannot be transmitted at same 
+time.
+
+
+
+Flow Control
+
+
+
+Flow Control
+
+
+
+Stop and wait ARQ
+
+
+
+Stop and wait ARQ
+
+
+
+Sliding Window Protocol
+
+
+
+Sliding Window Protocol
+
+
+
+Go Back N
+
+
+
+Go Back N
+
+
+
+Go Back N
+
+
+
+Go Back N
+
+
+
+Practice Problem 1 on “Go Back N”
+
+
+
+Practice Problem 1 on “Go Back N”
+
+
+
+Practice Problem 1 on “Go Back N”
+
+
+
+Practice Problem 1 on “Go Back N”
+
+
+
+Practice Problem 2 on “Go Back N”
+
+
+
+Practice Problem 2 on “Go Back N”
+
+
+
+Practice Problem 2 on “Go Back N”
+
+
+
+Practice Problem 2 on “Go Back N”
+
+
+
+Selective Repeat
+
+
+
+Selective Repeat
+
+ In SR protocol, only the required frame is transmitted not the entire window.
+
+
+
+Practice Problem 1 on Selective Repeat
+
+Here, 3 4 0 5 1 2 6 are the packets that has not been acknowledged by the receiver. 
+Hence, the answer as outstanding packet's in sender window.
+
+
+
+
+
+
+Practice Problem 2 on Selective Repeat
+
+
+
+Error detection and correction
+
+
+
+Round Trip Time
+
+
+
+Round Trip Time
+
+
+
+Calculate Propagation Time
+
+
+
+Latency (Delay)
+
+
+
+Latency (Delay)
+
+
+
+Latency (Delay)
+
+
+
+Latency (Delay)
+
+
+
+Latency (Delay)
+
+ Suppose, if there is Sender and Receiver, when the message is sent or
+received, then how much time this node takes to process this message is
+known as Processing Delay.
+
+ Generally, Processing Delay and Queuing Delay are not taken into account for
+calculating the latency.
+
+ So, the Latency is many dependent on 2 delays, that is, Transmission Delay
+and Propagation Delay.
+
+
+
+Transmission Delay
+
+
+
+Propagation Delay
+
+ If distance is 2.1 km and Speed of Light is 3 x 108 m/s but optical fiber speed
+is 70% of light speed. So, the Velocity (v) will be = 3 x 108 x 0.7 = 2.1 x 108
+
+m/s.
+
+
+
+
+
+Practice Problem on Transmission Delay and 
+Propagation Delay
+
+
+
+
+
+Parity Generators / Parity Bit – Odd Parity
+
+ Odd
+
+
+
+Parity Generators / Parity Bit – Even Parity
+
+ Even
+
+
+
+Odd & Even Parity Checker
+
+ CASE 1: Due to some noise, if bits get flipped at the receiver end, then following
+cases will occur with ERROR:
+
+
+
+Even Parity Checker
+
+ CASE 2: Due to some noise, if 2 bits get flipped at the receiver end, then following
+cases will occur with NO ERROR:
+
+ CASE 3: Due to some noise, if 3 (odd) bits get flipped at the receiver end, then
+following cases will occur with ERROR:
+
+
+
+Odd Parity Checker
+
+ CASE 4: Due to some noise, if we have 2 bits of error at the receiver end, then
+following cases will occur with NO ERROR:
+
+ CASE 5: Due to some noise, if we have 3 bits of error at the receiver end, then
+following cases will occur with ERROR:
+
+
+
+Hamming Code
+
+
+
+Hamming Code
+
+
+
+Hamming Code – error correction
+
+
+
+Hamming Code – error correction
+
+
+
+Error detection and correction
+
+
+
+Error detection and correction
+
+
+
+Error detection and correction
+
+
+
+Error detection and correction
+
+
+
+Vertical redundancy check
+
+
+
+Vertical redundancy check
+
+
+
+Vertical redundancy check
+
+
+
+Longitudinal redundancy check
+
+
+
+Longitudinal redundancy check
+
+
+
+Longitudinal redundancy check
+
+
+
+VRC & LRC – Practice Problem 1
+ The following bit stream is encoded using VRC, LRC and even parity. 
+
+Locate and correct the error if it is present.
+
+11000011 11110011 10110010 00001010
+
+00101010 00101011 10100011 01001011
+
+11100001
+
+
+
+Checksum
+
+
+
+Checksum
+
+
+
+Checksum
+
+
+
+Checksum
+
+
+
+Checksum
+
+
+
+Cyclic redundancy check
+
+
+
+Cyclic redundancy check
+
+
+
+Cyclic redundancy check
+
+
+
+Cyclic redundancy check
+
+ Here, the Divisor is common for both the sender and the receiver.
+
+ In the below mentioned case, there is NO ERROR in the data transmission.
+
+
+
+Cyclic redundancy check
+
+
+
+
+
+
+Cyclic redundancy check – Practice Problem 1
+
+
+
+Cyclic redundancy check – Practice Problem 1
+
+
+
+Cyclic redundancy check – Practice Problem 2
+ A bit stream 10011101 is transmitted using the standard CRC method. 
+
+The generator polynomial is x3 + 1. Show the actual bit string transmitted. 
+Suppose the third bit from left is inverted during transmission. Show that 
+this error is detected at the receiver end.
+
+
+
+Medium Access Control Sublayer (MAC sublayer)
+
+ The medium access control (MAC) is a sublayer of the data link layer of the
+open system interconnections (OSI) reference model for data transmission. It
+is responsible for flow control and multiplexing for transmission medium. It
+controls the transmission of data packets via remotely shared channels. It
+sends data over the network interface card.
+
+It is divided into two sublayers −
+
+ The logical link control (LLC) sublayer
+
+ The medium access control (MAC) sublayer
+
+
+
+Functions of MAC Layer
+
+ Functions of MAC Layer
+
+ It provides an abstraction of the physical layer to the LLC and upper layers of
+the OSI network.
+
+ It is responsible for encapsulating frames so that they are suitable for
+transmission via the physical medium.
+
+ It resolves the addressing of source station as well as the destination station, or
+groups of destination stations.
+
+ It performs multiple access resolutions when more than one data frame is to be
+transmitted. It determines the channel access methods for transmission.
+
+ It also performs collision resolution and initiating retransmission in case of
+collisions.
+
+ It generates the frame check sequences and thus contributes to protection
+against transmission errors.
+
+
+
+Medium access control (MAC) Addresses
+
+
+
+Medium access control (MAC) Addresses
+
+
+
+Medium access control (MAC) Addresses
+
+
+
+How to see the Medium MAC address?
+
+
+
+How to see the Medium MAC address?
+
+
+
+How to see the Medium MAC address?
+
+
+
+Addressing in Networking
+
+
+
+Addressing in Networking
+
+ IP addresses are 32 bits – IPv4 and 128 bits – IPv6 but MAC addresses are 48 
+bits.
+
+
+
+Classful Addressing
+
+
+
+Conversion of IPv4 addressing
+
+ Formula - Conversion of dotted decimal to binary and binary to dotted decimal 
+
+
+
+Conversion of IPv4 addressing
+
+
+
+Conversion of IPv4 addressing
+
+
+
+Conversion of IPv4 addressing
+
+
+
+Conversion of IPv4 addressing
+
+
+
+Conversion of IPv4 addressing
+
+
+
+Conversion of IPv4 addressing
+
+
+
+Classful Addressing
+
+ Class E, B, C, D
+
+
+
+Classful Addressing
+
+
+
+Classful Addressing – Subnet Mask
+
+
+
+Classful Addressing – Subnet Mask example
+
+ Here, different cases highlighting whether the switch may communicate 
+among the below mentioned devices:
+
+
+
+
+
+Classful Addressing – Subnet Mask 1 example
+
+
+
+Classful Addressing – Subnet Mask 1 example
+
+
+
+Classful Addressing – Subnet Mask 2 example
+
+
+
+Fixed Lenth & Variable Length Subnet Masking
+
+
+
+Fixed Lenth Subnet Masking
+
+
+
+Fixed Lenth Subnet Masking – another example
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking – Example 2
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Switching Techniques
+
+
+
+Switching Techniques - Circuit
+
+
+
+Switching Techniques - Circuit
+
+
+
+Switching Techniques - Message
+
+
+
+Switching Techniques - Packet
+
+
+
+Switching Techniques - Packet
+
+
+
+Switching Techniques - Packet
+
+
+
+Switching Techniques - Packet
+
+
+
+Practice Problem on Packet Switching - 1
+
+ Consider the store and forward packet switched network given below. Assume
+that the bandwidth of each link is 106 bytes / sec. A user on Host A sends a file
+of size 103 bytes to host B through routers R1 and R2 in three different ways.
+In the first case, a single packet containing the complete file is transmitted
+from A to B. In the second case, the file is split into 10 equal parts, and these
+packets are transmitted from A to B. In the third case, the file is split into 20
+equal parts and these packets are sent from A to B. Each packet contains 100
+bytes of header information along with the user data. Consider only
+transmission time and ignore processing, queuing and propagation delays.
+Also assume that there are no errors during transmission. Let T1, T2 and T3 be
+the times taken to transmit the file in the first, second and third case
+respectively. Compute the final time taken in all 3 cases?
+
+
+
+Practice Problem on Packet Switching - 1
+
+ Solution
+
+
+
+Practice Problem on Packet Switching - 2
+
+ In a packet switching network, packets are routed from source to destination 
+along a single path having two intermediate nodes. If the message size is 24 
+bytes and each packet contains a header of 3 bytes, then the optimum packet 
+size in case of 4, 6 and 7 will be?
+
+
+
+ Solution: 24, 8, 6
+
+
+
+Comparison of Message, Circuit and Packet 
+Switching
+
+Packet Switching
+Sr. No. Parameter Message Switching Circuit Switching
+
+Telephone network 
+for bi-directional, Internet for 
+
+Telegraph network for real time transfer datagram and 
+transmission of between reliable stream 
+
+1 Application telegrams. computers. service.
+2 End terminal Telegraph, teletype Telephone, modem Computer
+3 Information type ASCII Analog Voice Binary information
+
+Analog and digital 
+Digital data over data over different Digital data over 
+
+Transmission different transmission transmission different 
+4 system media. media. transmission media.
+
+Addressing Geographical Hierarchical Hierarchical 
+5 scheme addresses. numbering plan. address space.
+
+Route selected Each packet routed 
+6 Routing scheme Manual during call setup. independently.
+
+Packet 
+multiplexing shared 
+
+Multiplexing Character or message Circuit media access 
+7 scheme multiplexing multiplexing networks
+
+
+
+Multiple Access Protocols
+
+
+
+ALOHA
+
+
+
+Pure ALOHA
+
+
+
+Background of Pure ALOHA
+
+
+
+Pure ALOHA
+
+
+
+Example of Pure ALOHA
+
+
+
+Slotted ALOHA
+
+
+
+Slotted ALOHA
+
+ Pure Aloha, frames can be transmitted in medium at any time. That’s why, the
+vulnerable time is:
+
+ Slotted Aloha, we have time slots and sending is permitted only in the
+beginning of the time slot. That’s why, the vulnerable time is frame
+transmission time.
+
+
+
+Slotted ALOHA
+
+
+
+Slotted ALOHA
+
+ Here, slot 1, 4, 5 and 6 - NO COLLISSIONS.
+
+
+
+Slotted ALOHA
+
+
+
+CSMA
+
+
+
+CSMA
+
+
+
+CSMA
+
+
+
+CSMA
+
+
+
+CSMA
+
+
+
+CSMA – Types comparison
+
+
+
+CSMA / CD
+
+
+
+CSMA / CD
+
+
+
+CSMA / CD
+
+ Transmission period
+
+The final phase of a cognitive wireless network, when the winner of a contention 
+period begins transmitting data 
+
+ Contention period
+
+The time it takes for a transmission to begin after a frame is sent. The contention 
+window is divided into slots, and stations sense the channel after each slot. 
+
+ Idle period
+
+A channel is idle when its energy level is zero. A station monitors the channel's 
+energy level to determine if it's idle, busy, or in collision mode. 
+
+
+
+Efficiency of CSMA / CD
+
+
+
+CSMA / CA
+
+ RTS/CTS (Request to Send/Clear to Send) is a mechanism in wireless
+networks that helps to reduce frame collisions and the hidden node
+problem. It's an optional part of the IEEE 802.11 standard's Distributed
+Coordination Function (DCF).
+
+
+
+Channelization Protocols
+
+
+
+Channelization Protocols - FDMA
+
+
+
+Channelization Protocols - FDMA
+
+ Here, multiple stations are transmitting the data at the same time without 
+collision and without overlapping of data. 
+
+
+
+Channelization Protocols - TDMA
+
+
+
+Channelization Protocols - TDMA
+
+ TDMA is time shared approach. Here, at particular time, only 1 station is 
+using the entire bandwidth of the channel.
+
+
+
+Channelization Protocols - CDMA
+
+
+
+Channelization Protocols - CDMA
+
+ This is the case of multiplexing, here multiple signals are converted into single 
+signal.
+
+
+
+Control Access Protocols - Reservation
+
+ Just contemplate the scenario, suppose you have very important meeting at
+New Delhi. You are actually in Bengaluru and you prefer Train for your travel.
+What if you don’t reserve your seat and while searching you found free seat
+and at the same time some another guy is looking for the same free seat. This
+situation will result in collision.
+
+
+
+Control Access Protocols - Reservation
+
+
+
+Control Access Protocols - Reservation
+
+ Here, in first time interval - station 1, 3, and, 4 are making reservation whereas 
+station 2, 5 are not making any reservation.
+
+ In next time interval, station 1 alone is doing reservation, i.e. sending data.
+
+ In last time interval, no station is doing reservation, so nobody is sending data.
+
+ This is how the common channel or shared medium is accessed by more than 1 
+station without collision.
+
+
+
+Control Access Protocols - Polling
+
+
+
+Control Access Protocols - Polling
+
+
+
+Control Access Protocols - Polling
+
+
+
+Control Access Protocols - Polling
+
+
+
+Control Access Protocols – Token Passing
+
+
+
+Control Access Protocols – Token Passing
+
+
+
+Control Access Protocols – Token Passing
+
+
+
+Control Access Protocols – Token Passing
+
+
+
+Control Access Protocols – Token Passing
+
+
+
+Ethernet (802.3 IEEE standard) – Wired LAN 
+technologies
+
+
+
+Ethernet (802.3 IEEE standard) - Wired LAN 
+technologies
+
+
+
+Ethernet (802.3 IEEE standard)
+
+
+
+Ethernet – Practice Problems
+
+
+
+Ethernet – Practice Problems - 1
+
+
+
+Ethernet – Practice Problems - 2
+
+
+
+Ethernet – Practice Problems – 3 & 4
+
+
+
+Wireless LAN - WiFi (802.11)
+
+
+
+Wireless LAN - WiFi (802.11)
+
+ Ethernet uses CSMA / CD whereas Wi-Fi uses CSMA / CA  
+
+
+
+Wireless LAN - WiFi (802.11)
+
+
+
+Wireless LAN - WiFi (802.11)
+
+
+
+Wireless LAN - WiFi Frame Format
+
+
+
+Wireless LAN - WiFi Frame Format
+
+
+
+Wireless LAN - WiFi Frame Format
+
+
+
+Wireless LAN - WiFi Frame Format
+
+
+
+Wireless LAN - WiFi Frame Format
+
+
+
+Prof. Dr. SHAKTI KUNDU
+
+Computer Networks and Data Communication
+
+2026

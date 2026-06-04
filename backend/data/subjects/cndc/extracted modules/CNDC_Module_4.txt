@@ -1,0 +1,1657 @@
+﻿Computer Networks and Data 
+Communication
+
+Module 4
+
+CS 212
+
+Prof. (Dr.) SHAKTI KUNDU
+
+Jan-May 2026
+
+
+
+Module wise CONTENTS:
+ Module 1 - Introduction: An overview of networks, the Internet, services and protocols, RFCs 
+
+and standards of Networking, Data communication & its components, types of data 
+communication and communication channels. Key components of computer network; network 
+devices; types of computer networks; network topology; reference models (Network 
+Architectures) – OSI & TCP/IP.
+
+ Module 2 - Physical Layer: Introduction and functions; types of transmission media – guided 
+and unguided; integrated services digital network (ISDN); asynchronous transfer mode (ATM).
+
+ Module 3 - Data Link Layer: Overview; sliding window protocols - Stop-&-Wait; Go-Back-N,
+Selective Repeat; Error detection and correction; Hamming Code, LRC, VRC, CRC,
+Checksum, Round Trip Time, Latency (Delay); Medium Access Sublayer: medium access
+control (MAC) Addresses; Switching techniques - circuit, message & packet; Random Access
+Protocols - Pure ALOHA, Slotted ALOHA, CSMA / CD, CSMA / CA; Controlled Access
+Protocols – FDMA, TDMA, CDMA; Channelization Protocols – Reservation, Polling, Token
+Passing; Ethernet (802.3 IEEE standard), Wireless Links, Wireless LAN - WiFi (802.11).
+
+ Module 4 - Network Layer: Introduction; address resolution protocol (ARP); internet protocol
+(IP); internet control message protocol (ICMP); internet group management protocol (IGMP);
+IPv4 addressing, representation of IPv6; IPv4 vs IPv6; Conversion IPv4 to IPv6; Routing
+Protocols - routing information protocol (RIP), open shortest path first (OSPF); border gateway
+protocol (BGP); Enhanced Interior Gateway Routing Protocol (EIGRP).
+
+ Module 5 - Transport Layer: Introduction; transport layer protocols - UDP & TCP, TCP
+connection establishment; TCP connection termination; TCP congestion control. Application
+Layer: Introduction – features & functions; application layer protocols; Web and HTTP, Email,
+P2P network, its types & applications.
+
+ Module 6 – Network Optimization, Mathematical Models, Introduction Advance Computer
+Networks, MANET, WSN, PCN, SDN, IoT.
+
+
+
+ Module 4 - Network Layer: Introduction; address resolution protocol (ARP);
+internet protocol (IP); internet control message protocol (ICMP); internet
+group management protocol (IGMP); internet group management protocol
+(IGMP); IPv4 addressing, representation of IPv6; IPv4 vs IPv6; Conversion
+IPv4 to IPv6; Routing protocols - routing information protocol (RIP), open
+shortest path first (OSPF); border gateway protocol (BGP); Enhanced Interior
+Gateway Routing Protocol (EIGRP).
+
+
+
+Network Layer – Introduction, Features & Services
+
+ The network layer is a part of the communication process in computer
+
+networks. Its main job is to move data packets between different networks.
+
+ It helps route these packets from the sender to the receiver across multiple
+
+paths and networks. Network-to-network connections enable the Internet to
+
+function. These connections happen at the “network layer,” which sends data
+
+packets between different networks.
+
+ In the 7-layer OSI model, the network layer is layer 3. The Internet Protocol
+
+(IP) is a key protocol used at this layer, along with other protocols for routing,
+
+testing, and encryption.
+
+
+
+Network Layer – Introduction, Features & Services
+
+Features of Network Layer
+
+ The main responsibility of the Network layer is to carry the data packets from
+
+the source to the destination without changing or using them.
+
+ If the packets are too large for delivery, they are fragmented i.e., broken down
+
+into smaller packets.
+
+ It decides the route to be taken by the packets to travel from the source to the
+
+destination among the multiple routes available in a network (also called
+
+routing).
+
+ The source and destination addresses are added to the data packets inside the
+
+network layer.
+
+
+
+Network Layer – Introduction, Features & Services
+
+ Services Offered by Network Layer
+
+The services which are offered by the network layer protocol are as follows: 
+
+ Packetizing
+
+ Routing 
+
+ Forwarding
+
+
+
+Network Layer – Introduction, Features & Services
+
+1. Packetizing
+
+ The process of encapsulating the data received from the upper layers of the
+
+network (also called payload) in a network layer packet at the source and
+
+decapsulating the payload from the network layer packet at the destination is
+
+known as packetizing.
+
+
+
+Network Layer – Introduction, Features & Services
+
+1. Packetizing
+
+ The source host adds a header that contains the source and destination address
+
+and some other relevant information required by the network layer protocol to
+
+the payload received from the upper layer protocol and delivers the packet to
+
+the data link layer.
+
+ The destination host receives the network layer packet from its data link layer,
+
+decapsulates the packet, and delivers the payload to the corresponding upper
+
+layer protocol. The routers in the path are not allowed to change either the
+
+source or the destination address. The routers in the path are not allowed to
+
+decapsulate the packets they receive unless they need to be fragmented.
+
+
+
+Network Layer – Introduction, Features & Services
+
+2. Routing
+
+ Routing is the process of moving data from one device to another device.
+
+These are two other services offered by the network layer.
+
+
+
+Network Layer – Introduction, Features & Services
+
+2. Routing
+
+ In a network, there are a number of routes available from the source to the
+
+destination. The network layer specifies some strategies which find out the
+
+best possible route. This process is referred to as routing. There are a number
+
+of routing protocols that are used in this process, and they should be run to
+
+help the routers coordinate with each other and help in establishing
+
+communication throughout the network.
+
+
+
+Network Layer – Introduction, Features & Services
+
+3. Forwarding
+
+ Forwarding is simply defined as the action applied by each router when a
+
+packet arrives at one of its interfaces.
+
+
+
+Network Layer – Introduction, Features & Services
+
+3. Forwarding
+
+ When a router receives a packet from one of its attached networks, it needs to
+
+forward the packet to another attached network (unicast routing) or to some
+
+attached networks (in the case of multicast routing). Routers are used on the
+
+network for forwarding a packet from the local network to the remote network.
+
+So, the process of routing involves packet forwarding from an entry interface
+
+out to an exit interface.
+
+
+
+Network Layer – Introduction, Features & Services
+
+ Differences Between Routing and Forwarding
+
+Routing
+Forwarding
+
+Forwarding is simply defined as the 
+Routing is the process of moving data 
+
+action applied by each router when a 
+from one device to another device.
+
+packet arrives at one of its interfaces.
+
+Operates on the Network Layer. Operates on the Network Layer.
+
+Checks the forwarding table and work 
+Work is based on Forwarding Table.
+
+according to that.
+
+Works on protocols like Routing Works on protocols like UDP 
+Information Protocol (RIP) for Routing. Encapsulating Security Payloads
+
+
+
+Network Layer – IPv4 addressing
+
+
+
+Network Layer – IPv4 addressing
+
+
+
+Network Layer – IPv4 addressing
+
+ Formula - Conversion of dotted decimal to binary and binary to dotted decimal 
+
+
+
+Network Layer – IPv4 addressing
+
+
+
+Network Layer – IPv4 addressing
+
+
+
+Network Layer – IPv4 addressing
+
+
+
+Network Layer – IPv4 addressing
+
+
+
+Network Layer – IPv4 addressing
+
+
+
+Network Layer – IPv4 addressing
+
+
+
+Network Layer – IPv4 addressing
+
+
+
+Classful Addressing – Subnet Mask 1 example
+
+
+
+Classful Addressing – Subnet Mask 1 example
+
+• First IP address of the subnet represents Network address whereas the last IP address of the 
+subnet represents the Broadcast address.
+
+• Here, 216.21.5.31 is the broadcast address of first subnet which is usually not assigned to the 
+Host.
+
+• Within the network, SWITCH is sufficient to establish a communication.
+• On the other hand, ROUTER is needed to establish a communication in different network.
+
+
+
+Classful Addressing – Subnet Mask 2 example
+
+
+
+Fixed Lenth & Variable Length Subnet Masking
+
+
+
+Fixed Lenth Subnet Masking
+
+
+
+Fixed Lenth Subnet Masking – another example
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking – Example 2
+
+
+
+Variable Length Subnet Masking
+
+
+
+Variable Length Subnet Masking
+
+
+
+Network Layer – IPv4
+
+ IP stands for Internet Protocol version v4 (IPv4), is the most widely used
+
+system for identifying devices on a network. It uses a set of four numbers,
+
+separated by periods (like 192.168.0.1), to give each device a unique address.
+
+This address helps data find its way from one device to another over the
+
+internet.
+
+ IPv4 was the primary version brought into action for production within the
+
+ARPANET in 1983. IP version four addresses are 32-bit integers which will be
+
+expressed in decimal notation. Example- 192.0.2.126 could be an IPv4
+
+address.
+
+
+
+Network Layer – IPv4
+
+Parts of IPv4: IPv4 addresses consist of three parts:
+
+ Network Part: The network part indicates the distinctive variety that’s
+
+appointed to the network. The network part conjointly identifies the category
+
+of the network that’s assigned.
+
+ Host Part: The host part uniquely identifies the machine on your network. This
+
+part of the IPv4 address is assigned to every host. For each host on the
+
+network, the network part is the same, however, the host half must vary.
+
+ Subnet Number: This is the nonobligatory part of IPv4. Local networks that
+
+have massive numbers of hosts are divided into subnets and subnet numbers
+
+are appointed to that.
+
+
+
+Network Layer – IPv4
+
+ Characteristics of IPv4
+
+ IPv4 could be a 32-bit IP Address.
+
+ IPv4 could be a numeric address, and its bits are separated by a dot.
+
+ The number of header fields is twelve and the length of the header field is 
+
+twenty.
+
+ It has Unicast, broadcast, and multicast-style addresses.
+
+ IPv4 supports VLSM (Virtual Length Subnet Mask).
+
+ IPv4 uses the Post Address Resolution Protocol to map to the MAC 
+
+address.
+
+ RIP may be a routing protocol supported by the routed daemon.
+
+ Networks ought to be designed either manually or with DHCP.
+
+ Packet fragmentation permits from routers and causes host.
+
+
+
+Network Layer – IPv6
+
+
+
+Network Layer – IPv6
+
+
+
+Network Layer – IPv6
+
+
+
+Network Layer – IPv6
+
+ The next generation Internet Protocol (IP) address standard, known as IPv6, is
+meant to work in tandem with IPv4, which is still in widespread use today, and
+eventually replace it. To communicate with other devices, a computer,
+smartphone, home automation component, Internet of Things sensor, or any
+other Internet-connected device needs a numerical IP address. Because so
+many connected devices are being used, the original IP address scheme,
+known as IPv4, is running out of addresses.
+
+ Representation of IPv6
+
+An IPv6 address consists of eight groups of four hexadecimal digits separated by ‘
+. ‘ and each Hex digit representing four bits so the total length of IPv6 is 128 bits.
+Structure given below.
+
+
+
+Network Layer – IPv6
+
+gggg.gggg.gggg.ssss.xxxx.xxxx.xxxx.xxxx
+
+ The first 48 bits represent Global Routing Prefix. The next 16 bits represent
+the student ID and the last 64 bits represent the host ID. The first 64 bits
+represent the network portion and the last 64 bits represent the interface id.
+
+ Global Routing Prefix: The Global Routing Prefix is the portion of an IPv6
+address that is used to identify a specific network or subnet within the larger
+IPv6 internet. It is assigned by an ISP or a regional internet registry (RIR).
+
+ Student Id: The portion of the address used within an organization to identify
+subnets. This usually follows the Global Routing Prefix.
+
+ Host Id: The last part of the address, is used to identify a specific host on a
+network.
+
+ Example: 3001:0da8:75a3:0000:0000:8a2e:0370:7334
+
+
+
+Network Layer – IPv6
+
+ Types of IPv6 Address
+
+ Unicast Addresses: Only one interface is specified by the unicast address. A
+packet moves from one host to the destination host when it is sent to a unicast
+address destination.
+
+ Multicast Addresses: It represents a group of IP devices and can only be used
+as the destination of a datagram.
+
+ Anycast Addresses: The multicast address and the anycast address are the
+same. The way the anycast address varies from other addresses is that it can
+deliver the same IP address to several servers or devices. Keep in mind that the
+hosts do not receive the IP address. Stated differently, multiple interfaces or a
+collection of interfaces are assigned an anycast address.
+
+IPv6 vs IPv4
+
+ This new IP address version is being deployed to fulfil the need for more
+Internet addresses. With 128-bit address space, it allows 340 undecillion
+unique address space.
+
+ IPv6 support a theoretical maximum of 340, 282, 366, 920, 938, 463, 463, 374,
+607, 431, 768, 211, 456. To keep it straightforward, we will never run out of
+IP addresses again.
+
+
+
+Conversion of IPv4 to IPv6
+
+
+
+Difference between IPv4 & IPv6
+
+
+
+Network Layer – IPv6
+ The next iteration of the IP standard is known as Internet Protocol version 6 (IPv6). Although 
+
+IPv4 and IPv6 will coexist for a while, IPv6 is meant to work in tandem with IPv4 before 
+eventually taking its place. We need to implement IPv6 in order to proceed and keep bringing 
+new gadgets and services to the Internet. 
+
+IPv6 IPv4
+
+IPv6 has a 128-bit address length IPv4 has a 32-bit address length
+
+It supports Auto and renumbering It Supports Manual 
+address configuration and DHCP address configuration
+
+The address space of IPv6 is quite 
+It can generate 4.29×109 address 
+
+large it can produce 3.4×1038 address 
+space
+
+space
+
+Address Representation of IPv6 is in Address representation of IPv4 is in 
+hexadecimal decimal
+
+In IPv6 checksum field is not 
+In IPv4 checksum field is available
+
+available
+
+IPv6 has a header of 40 bytes fixed IPv4 has a header of 20-60 bytes.
+
+IPv4 supports VLSM(Variable Length 
+IPv6 does not support VLSM.
+
+subnet mask).
+
+
+
+Network Layer – Address Resolution Protocol
+
+ When computer programs send or get messages, they usually use something
+called an IP address, which is like a virtual address. But underneath, the real
+talk happens using another type of address called a MAC address, which is
+like a device’s actual home address.
+
+ So, our goal is to find out the MAC address of where we want to talk to. That’s
+where ARP comes in handy. It helps by turning the IP address into the
+physical MAC address, so we can chat with other devices on the network.
+
+ Most computer programs/applications use logical addresses (IP Addresses) to
+send/receive messages. However, the actual communication happens over the
+Physical Address (MAC Address) from layer 2 of the OSI model. So, our
+mission is to get the destination MAC Address which helps communicate with
+other devices. This is where ARP comes into the picture; its functionality is to
+translate IP addresses into physical addresses.
+
+
+
+Network Layer – Address Resolution Protocol
+
+ The acronym ARP stands for Address Resolution Protocol which is one of the
+most important protocols of the Data link layer in the OSI model. It is
+responsible to find the hardware address of a host from a known IP address.
+There are three basic ARP terms:
+
+ Reverse ARP
+
+ Proxy ARP
+
+ Inverse ARP
+
+
+
+Network Layer – Address Resolution Protocol
+
+Reverse ARP
+
+ Reverse Address Resolution Protocol is a protocol that is used in local area
+networks (LAN) by client machines for requesting IP Address (IPv4) from
+Router’s ARP Table. Whenever a new machine comes, which requires an IP
+Address for its use. In that case, the machine sends a RARP broadcast packet
+containing MAC Address in the sender and receiver hardware field.
+
+Proxy ARP
+
+ Proxy Address Resolution Protocol work to enable devices that are separated
+into network segments connected through the router in the same IP to resolve
+IP Address to MAC Address. Proxy ARP is enabled so that the ‘proxy router’
+resides with its MAC address in a local network as it is the desired router to
+which broadcast is addressed. In case, when the sender receives the MAC
+Address of the Proxy Router, it is going to send the datagram to Proxy Router,
+which will be sent to the destination device.
+
+
+
+Network Layer – Address Resolution Protocol
+
+Inverse ARP
+
+ Inverse Address Resolution Protocol uses MAC Address to find the IP
+Address, it can be simply illustrated as Inverse ARP is just the inverse of ARP.
+In ATM (Asynchronous Transfer Mode) Networks, Inverse ARP is used by
+default. Inverse ARP helps in finding Layer-3 Addresses from Layer-2
+Addresses.
+
+
+
+Network Layer – Address Resolution Protocol
+
+How ARP Works?
+
+ Imagine a device that wants to communicate with others over the internet.
+
+What does ARP do? It broadcast a packet to all the devices of the source
+
+network. The devices of the network peel the header of the data link layer from
+
+the Protocol Data Unit (PDU) called frame and transfer the packet to the
+
+network layer (layer 3 of OSI) where the network ID of the packet is validated
+
+with the destination IP’s network ID of the packet and if it’s equal then it
+
+responds to the source with the MAC address of the destination, else the
+
+packet reaches the gateway of the network and broadcasts packet to the
+
+devices it is connected with and validates their network ID. The above process
+
+continues till the second last network device in the path reaches the destination
+
+where it gets validated and ARP, in turn, responds with the destination MAC
+
+address.
+
+
+
+Network Layer –
+Address Resolution Protocol
+
+ ARP Cache: After resolving the MAC address, the ARP sends it to the source
+where it is stored in a table for future reference. The subsequent
+communications can use the MAC address from the table.
+
+ ARP Cache Timeout: It indicates the time for which the MAC address in the
+ARP cache can reside.
+
+ ARP request: This is nothing but broadcasting a packet over the network to
+validate whether we came across the destination MAC address or not.
+
+ The physical address of the sender.
+
+ The IP address of the sender.
+
+ The physical address of the receiver is FF:FF:FF:FF:FF: FF or 1’s.
+
+ The IP address of the receiver.
+
+ ARP response/reply: It is the MAC address response that the source receives
+from the destination which aids in further communication of the data.
+
+
+
+Network Layer – Address Resolution Protocol
+
+ CASE-1:
+
+ The sender wants to send a packet to another host on the same network.
+
+ Use ARP to find another host’s physical address.
+
+ CASE-2:
+
+ The sender is a host and wants to send a packet to another host on another 
+network.
+
+ The sender looks at its routing table.
+
+ Find the IP address of the next hop (router) for this destination.
+
+ CASE-3:
+
+ The sender is a router and received a datagram.
+
+ The router checks its routing table.
+
+ Calculate the IP of the next router.
+
+ Use ARP to find the next router’s physical address. 
+
+ CASE-4:
+
+ The sender is a router that has received a datagram destined for a host in 
+the same network.
+
+ Use ARP to find this host’s physical address. 
+
+ Note: An ARP request is broadcast, and an ARP response is a Unicast.
+
+
+
+Network Layer – Address Resolution Protocol
+
+ Connect two PC, say A and B with a cross cable. Now you can see the 
+working of ARP by typing these commands: 
+
+1. A > arp -a
+
+ There will be no entry at the table because they never communicated with each 
+other. 
+
+2. A > ping 192.168.1.2
+
+IP address of destination is 192.168.1.2
+Reply comes from destination but one packet is lost because of ARP processing.
+
+
+
+Network Layer – Address Resolution Protocol
+
+ Now, entries of the ARP table can be seen by typing the command. This is 
+what the ARP table looks like: 
+
+
+
+Network Layer – Address Resolution Protocol
+
+Types of ARP
+
+1. Proxy ARP
+
+ A Layer 3 device can reply to an ARP request for a target that is on a different
+
+network than the sender by using a technique called proxy ARP. In response to
+
+the ARP, the router that has been set for Proxy ARP maps its MAC address to
+
+the target IP address, deceiving the sender into believing that the message has
+
+arrived at destination.
+
+Because the packets have the required information, the proxy router at the backend
+
+forwards them to the correct location.
+
+
+
+Network Layer – Address Resolution Protocol
+
+Types of ARP
+
+2. Gratuitous ARP
+
+ The host’s ARP request known as “gratuitous ARP” aids in locating duplicate
+
+IP addresses. This is a broadcast request for the router’s IP address. All other
+
+nodes are unable to use the IP address assigned to a switch or router in the
+
+event that it sends out an ARP request to obtain its IP address and receives no
+
+ARP answers in return. However, another node uses the IP address assigned to
+
+the switch or router if it sends an ARP request for its IP address and gets an
+
+ARP response.
+
+
+
+Network Layer – Address Resolution Protocol
+
+Types of ARP
+
+3. Reverse ARP
+
+ In a local area network (LAN), the client system uses this networking protocol
+
+to ask the ARP gateway router table for its IPv4 address. The network
+
+administrator creates a table in the gateway-router that is used to correlate the
+
+IP address with the MAC address.
+
+4. Inverse ARP
+
+ The purpose of inverse ARP, which is the opposite of ARP, is to deduce the
+
+nodes’ IP addresses from their data link layer addresses. Frame relays and
+
+ATM networks, where Layer 2 virtual circuit addressing is frequently obtained
+
+from Layer 2 signaling, are the primary applications for them. These virtual
+
+circuits can be used with the necessary Layer 3 addresses accessible.
+
+
+
+Network Layer - ICMP
+
+ ICMP is used for reporting errors and management queries.
+
+ It is a supporting protocol and is used by network devices like routers for
+
+sending error messages and operations information. For example, the
+
+requested service is not available or a host or router could not be reached.
+
+ Since the IP protocol lacks an error-reporting or error-correcting mechanism,
+
+information is communicated via a message.
+
+
+
+Network Layer - ICMP
+
+Usages of ICMP:
+
+ ICMP is used for error reporting if two devices connect over the internet and
+
+some error occurs, So, the router sends an ICMP error message to the source
+
+informing about the error.
+
+ ICMP protocol is used to perform network diagnosis by making use of
+
+traceroute and ping utility.
+
+ Traceroute: Traceroute utility is used to know the route between two
+
+devices connected over the internet. It routes the journey from one router
+
+to another, and a traceroute is performed to check network issues before
+
+data transfer.
+
+ Ping: Ping is a simple kind of traceroute known as the echo-request
+
+message, it is used to measure the time taken by data to reach the
+
+destination and return to the source, these replies are known as echo-
+
+replies messages.
+
+
+
+Network Layer - ICMP
+
+ How Does ICMP Work?
+
+ ICMP is the primary and important protocol of the IP suite, but ICMP isn’t
+associated with any transport layer protocol (TCP or UDP) as it doesn’t need
+to establish a connection with the destination device before sending any
+message as it is a connectionless protocol.
+
+ The working of ICMP is just contrasting with TCP, as TCP is a connection-
+oriented protocol whereas ICMP is a connectionless protocol. Whenever a
+connection is established before the message sending, both devices must be
+ready through a TCP Handshake.
+
+ ICMP packets are transmitted in the form of datagrams that contain an IP
+header with ICMP data. ICMP datagram is similar to a packet, which is an
+independent data entity.
+
+
+
+Network Layer - ICMP
+
+ ICMP Packet Format - ICMP header comes after IPv4 and IPv6 packet header.
+
+ In the ICMP packet format, the first 32 bits of the packet contain three fields:
+
+ Type (8-bit): The initial 8-bit of the packet is for message type, it provides a
+brief description of the message so that receiving network would know what
+kind of message it is receiving and how to respond to it. Some common
+message types are as follows:
+
+ Type 0 – Echo reply
+
+ Type 3 – Destination unreachable
+
+ Type 5 – Redirect Message
+
+ Type 8 – Echo Request
+
+ Type 11 – Time Exceeded
+
+ Type 12 – Parameter problem
+
+ Code (8-bit): Code is the next 8 bits of the ICMP packet format, this field
+carries some additional information about the error message and type.
+
+ Checksum (16-bit): Last 16 bits are for the checksum field in the ICMP packet
+header. The checksum is used to check the number of bits of the complete
+message and enable the ICMP tool to ensure that complete data is delivered.
+
+
+
+Network Layer - ICMP
+
+The next 32 bits of the ICMP Header are Extended Header which has the work of
+pointing out the problem in IP Message. Byte locations are identified by the
+pointer which causes the problem message and receiving device looks here for
+pointing to the problem.
+
+The last part of the ICMP packet is Data or Payload of variable length. The bytes
+included in IPv4 are 576 bytes and in IPv6, 1280 bytes.
+
+
+
+Network Layer - ICMP
+Types of ICMP Messages
+
+
+
+Network Layer- IGMP
+
+ IGMP is acronym for Internet Group Management Protocol. IGMP is a
+
+communication protocol used by hosts and adjacent routers for
+
+multicasting communication with IP networks and uses the resources
+
+efficiently to transmit the message/data packets. Multicast communication
+
+can have single or multiple senders and receivers and thus, IGMP can be used
+
+in streaming videos, gaming or web conferencing tools. This protocol is used
+
+on IPv4 networks and for using this on IPv6, multicasting is managed by
+
+Multicast Listener Discovery (MLD). Like other network protocols, IGMP is
+
+used on network layer. MLDv1 is almost same in functioning as IGMPv2 and
+
+MLDv2 is almost similar to IGMPv3. The communication protocol, IGMPv1
+
+was developed in 1989 at Stanford University. IGMPv1 was updated to
+
+IGMPv2 in year 1997 and again updated to IGMPv3 in year 2002.
+
+
+
+Network Layer- IGMP
+
+ The IGMP protocol is used by the hosts and router to identify the hosts in a
+
+LAN that are the members of a group. IGMP is a part of the IP layer and
+
+IGMP has a fixed- size message. The IGMP message is encapsulated within an
+
+IP datagram.
+
+ The IP protocol supports two types of communication:
+
+ Unicasting: It is a communication between one sender and one receiver.
+
+Therefore, we can say that it is one-to-one communication.
+
+ Multicasting: Sometimes the sender wants to send the same message to a large
+
+of receivers simultaneously. This process is known as multicasting which has
+
+one-to-many communication.
+
+
+
+Network Layer- IGMP
+ Types: There are 3 versions of IGMP. These versions are backward 
+
+compatible. Following are the versions of IGMP:
+
+1. IGMPv1: The version of IGMP communication protocol allows all the 
+supporting hosts to join the multicast groups using membership request and 
+include some basic features. But, host cannot leave the group on their own and 
+have to wait for a timeout to leave the group. The message packet format in 
+IGMPv1:
+
+ Version – Set to 1.
+
+ Type – 1 for Host Membership Query and Host Membership Report.
+
+ Unused – 8-bits of zero which are of no use.
+
+ Checksum – It is the one’s complement of the sum of IGMP messages.
+
+ Group Address – The group address field is zero when sent and ignored when 
+received in membership query message. In a membership report message, the 
+group address field takes the IP host group address of the group being 
+reported.
+
+
+
+Network Layer- IGMP
+
+2. IGMPv2: IGMPv2 is the revised version of IGMPv1 communication protocol. 
+It has added functionality of leaving the multicast group using group membership. 
+The message packet format in IGMPv2:
+
+ Max Response Time: This field is ignored for message types other than
+membership query. For membership query type, it is the maximum time
+allowed before sending a response report. The value is in units of 0.1 seconds.
+
+ Checksum: It is the one’s complement of the sum of IGMP message. It
+determines the entire payload of the IP datagram in which IGMP message is
+encapsulated.
+
+ Group Address: It is set as 0 when sending a general query. Otherwise,
+multicast address for group-specific or source-specific queries. The behavior
+of this field depends on the type of the message sent.
+
+For Membership Query, the group address is set to zero for General Query and set 
+to multicast group address for a specific query. For Membership Report, the group 
+address is set to the multicast group address. For Leave Group, it is set to the 
+multicast group address.
+
+
+
+Network Layer- IGMP
+3. IGMPv3: IGMPv2 was revised to IGMPv3 and added source-specific multicast
+and membership report aggregation. These reports are sent to 224.0.0.22. The
+message packet format in IGMPv3:
+
+ Max Response Time: This field is ignored for message types other than
+membership query. For membership query type, it is the maximum time
+allowed before sending a response report. The value is in units of 0.1 seconds.
+
+ Checksum: It is the one’s complement of the one’s complement of the sum of
+IGMP message.
+
+ Group Address: It is set as 0 when sending a general query. Otherwise,
+multicast address for group-specific or source-specific queries.
+
+ Resv: It is set zero of sent and ignored when received.
+
+
+
+Network Layer- IGMP
+3. IGMPv3: IGMPv2 was revised to IGMPv3 and added source-specific multicast and
+membership report aggregation. These reports are sent to 224.0.0.22. The message packet
+format in IGMPv3:
+
+ S flag: It represents Suppress Router-side Processing flag. When the flag is set,
+it indicates to suppress the timer updates that multicast routers perform upon
+receiving any query.
+
+ QRV: It represents Querier’s Robustness Variable. Routers keeps on retrieving
+the QRV value from the most recently received query as their own value until
+the most recently received QRV is zero.
+
+ QQIC: It represents Querier’s Query Interval Code.
+
+ Number of sources: It represents the number of source addresses present in the
+query. For general query or group-specific query, this field is zero and for
+group-and-source-specific query, this field is non-zero.
+
+ Source Address[i]: It represents the IP unicast address for N fields.
+
+
+
+Network Layer – Classes of routing protocols
+
+ Routing is a process in which the layer 3 devices (either router or layer 3
+switches) find the optimal path to deliver a packet from one network to
+another. Dynamic routing protocols use metric, cost, and hop count to identify
+the best path from the path available for the destination network. There are
+mainly 3 different classes of routing protocols:
+
+1. Distance Vector Routing Protocol
+
+ These protocols select the best path on the basis of hop counts to reach a
+destination network in a particular direction. Dynamic protocol like RIP is an
+example of a distance vector routing protocol. Hop count is each router that
+occurs in between the source and the destination network. The path with the
+least hop count will be chosen as the best path.
+
+Features:
+
+ Updates of the network are exchanged periodically.
+
+ Updates (routing information) is not broadcasted but shared to
+neighboring nodes only.
+
+ Full routing tables are not sent in updates but only distance vector is
+shared.
+
+ Routers always trust routing information received from neighbor routers.
+This is also known as routing on rumors.
+
+
+
+Network Layer – Classes of routing protocols
+
+2. Link State Routing Protocol
+
+ These protocols know more about Internetwork than any other distance vector
+routing protocol. These are also known as SPF (Shortest Path First) protocol.
+OSPF is an example of link-state routing protocol.
+
+Features:
+
+ Hello, messages, also known as keep-alive messages are used for neighbor
+discovery and recovery.
+
+ Concept of triggered updates is used i.e updates are triggered only when there
+is a topology change.
+
+ Only that many updates are exchanged which is requested by the neighbor
+router.
+
+Link state routing protocol maintains three tables namely:
+
+ Neighbor table: the table which contains information about the neighbors of
+the router only, i.e, to which adjacency has been formed.
+
+ Topology table: This table contains information about the whole topology i.e
+contains both best and backup routes to a particular advertised networks.
+
+ Routing table: This table contains all the best routes to the advertised network.
+
+
+
+Network Layer – Classes of routing protocols
+
+3. Advanced Distance Vector Routing Protocol
+
+ It is also known as hybrid routing protocol which uses the concept of both
+distance vector and link-state routing protocol.
+
+ Enhanced Interior Gateway Routing Protocol (EIGRP) is an example of this
+class of routing protocol. EIGRP acts as a link-state routing protocol as it uses
+the concept of Hello protocol for neighbor discovery and forming an
+adjacency.
+
+ Also, partial updates are triggered when a change occurs.
+
+ EIGRP acts as a distance-vector routing protocol as it learned routes from
+directly connected neighbors.
+
+
+
+Network Layer - routing information protocol (RIP)
+
+ Routing Information Protocol (RIP) is a dynamic routing protocol that uses
+hop count as a routing metric to find the best path between the source and
+the destination network. It is a distance-vector routing protocol that has an
+administrative distance (AD) value of 120 and works on the Network layer of
+the OSI model. RIP uses port number 520.
+
+ Hop Count
+
+ Hop count is the number of routers occurring in between the source and
+destination network. The path with the lowest hop count is considered as the
+best route to reach a network and therefore placed in the routing table. RIP
+prevents routing loops by limiting the number of hops allowed in a path from
+source and destination. The maximum hop count allowed for RIP is 15 and a
+hop count of 16 is considered as network unreachable.
+
+ Features of RIP
+
+1. Updates of the network are exchanged periodically. 
+
+2. Updates (routing information) are always broadcast. 
+
+3. Full routing tables are sent in updates. 
+
+4. Routers always trust routing information received from neighbor routers. 
+This is also known as Routing on rumors. 
+
+
+
+Network Layer - routing information protocol (RIP)
+
+ RIP versions:
+
+ There are three versions of routing information protocol – RIP Version1, RIP 
+Version2, and RIPng.
+
+RIP v1 RIP v2 RIPng
+
+Sends update as broadcast Sends update as multicast Sends update as multicast
+
+Multicast at FF02::9 (RIPng can 
+Broadcast at 255.255.255.255 Multicast at 224.0.0.9 only run on IPv6 networks)
+
+Doesn’t support authentication of Supports authentication of RIPv2 
+–
+
+updated messages update messages
+
+Classless protocol updated 
+Classful routing protocol Classless updates are sent
+
+supports classful
+
+ RIP v1 is known as Classful Routing Protocol because it doesn’t send
+information of subnet mask in its routing update.
+
+ RIP v2 is known as Classless Routing Protocol because it sends information of
+subnet mask in its routing update.
+
+
+
+Network Layer - routing information protocol (RIP)
+
+ >> Use debug command to get the details:
+
+# debug ip rip
+
+ >> Use this command to show all routes configured in router, say for router 
+R1:
+
+R1# show ip route
+
+ >> Use this command to show all protocols configured in router, say for router 
+R1:
+
+
+
+R1# show ip protocols
+
+
+
+Network Layer - routing information protocol (RIP)
+
+ Configuration:
+
+ Consider the above-given topology which has 3-routers R1, R2, R3. R1 has IP 
+address 172.16.10.6/30 on s0/0/1, 192.168.20.1/24 on fa0/0. R2 has IP address 
+172.16.10.2/30 on s0/0/0, 192.168.10.1/24 on fa0/0. R3 has IP address 
+172.16.10.5/30 on s0/1, 172.16.10.1/30 on s0/0, 10.10.10.1/24 on fa0/0. 
+
+ Configure RIP for R1:
+
+R1(config)# router rip
+R1(config-router)# network 192.168.20.0
+R1(config-router)# network 172.16.10.4
+R1(config-router)# version 2
+R1(config-router)# no auto-summary
+
+ Note: no auto-summary command disables the auto-summarisation. If we
+don’t select any auto-summary, then the subnet mask will be considered as
+classful in Version 1.
+
+
+
+Network Layer - routing information protocol (RIP)
+
+ Configuring RIP for R2:
+
+R2(config)# router rip
+R2(config-router)# network 192.168.10.0
+R2(config-router)# network 172.16.10.0
+R2(config-router)# version 2
+R2(config-router)# no auto-summary
+
+ Similarly, Configure RIP for R3:
+
+R3(config)# router rip
+R3(config-router)# network 10.10.10.0
+R3(config-router)# network 172.16.10.4
+R3(config-router)# network 172.16.10.0
+R3(config-router)# version 2
+R3(config-router)# no auto-summary
+
+
+
+Network Layer - routing information protocol (RIP)
+
+ RIP timers:
+
+ Update timer: The default timing for routing information being exchanged by
+the routers operating RIP is 30 seconds. Using an Update timer, the routers
+exchange their routing table periodically.
+
+ Invalid timer: If no update comes until 180 seconds, then the destination router
+considers it invalid. In this scenario, the destination router mark hop counts as
+16 for that router.
+
+ Hold down timer: This is the time for which the router waits for a neighbor
+router to respond. If the router isn’t able to respond within a given time then it
+is declared dead. It is 180 seconds by default.
+
+ Flush time: It is the time after which the entry of the route will be flushed if it
+doesn’t respond within the flush time. It is 60 seconds by default. This timer
+starts after the route has been declared invalid and after 60 seconds i.e time
+will be 180 + 60 = 240 seconds.
+
+ Note that all these times are adjustable. Use this command to change the
+timers: R1(config-router)#  timers basic
+
+R1(config-router)#  timers basic 20   80    80    90 
+
+
+
+Network Layer - open shortest path first (OSPF)
+
+ Open Shortest Path First (OSPF) is a link-state routing protocol that is used
+to find the best path between the source and the destination router using
+its own Shortest Path First.
+
+ Router Id: It is the highest active IP address present on the router. First, the
+
+highest loopback address is considered. If no loopback is configured then the
+
+highest active IP address on the interface of the router is considered.
+
+ Router priority: It is an 8-bit value assigned to a router operating OSPF, used
+
+to elect DR and BDR in a broadcast network.
+
+ Designated Router (DR): It is elected to minimize the number of adjacencies
+
+formed. DR distributes the LSAs to all the other routers. DR is elected in a
+
+broadcast network to which all the other routers share their DBD. In a
+
+broadcast network, the router requests for an update to DR, and DR will
+
+respond to that request with an update.
+
+
+
+Network Layer - open shortest path first (OSPF)
+
+ Open Shortest Path First (OSPF) is a link-state routing protocol that is used
+to find the best path between the source and the destination router using
+its own Shortest Path First.
+
+ Backup Designated Router (BDR): BDR is a backup to DR in a broadcast
+
+network. When DR goes down, BDR becomes DR and performs its functions.
+
+ DR and BDR election: DR and BDR election takes place in the broadcast
+
+network or multi-access network. Here are the criteria for the election:
+
+ The router having the highest router priority will be declared as DR.
+
+ If there is a tie in router priority then the highest router Id be considered.
+
+First, the highest loopback address is considered. If no loopback is
+
+configured then the highest active IP address on the interface of the router
+
+is considered.
+
+
+
+Network Layer - open shortest path first (OSPF)
+
+ OSPF States - The device operating OSPF goes through certain states. These
+states are:
+
+ Down: In this state, no hello packets have been received on the interface.
+
+ Note – The Downstate doesn’t mean that the interface is physically down.
+Here, it means that the OSPF adjacency process has not started yet.
+
+ INIT: In this state, the hello packets have been received from the other router.
+
+ 2WAY: In the 2WAY state, both the routers have received the hello packets
+from other routers. Bidirectional connectivity has been established.
+
+ Note – In between the 2WAY state and Exstart state, the DR and BDR
+election takes place.
+
+ Exstart: In this state, NULL DBD (database description) are exchanged. In this
+state, the master and slave elections take place. The router having the higher
+router Id become the master while the other becomes the slave. This election
+decides Which router will send its DBD first (routers who have formed
+neighbourship will take part in this election).
+
+
+
+Network Layer - open shortest path first (OSPF)
+ OSPF States…
+
+ Exchange: In this state, the actual DBDs (database descriptions) are
+exchanged.
+
+ Loading: In this state, LSR (Link State Request), LSU (Link State Update),
+and LSA (Link State Acknowledgement) are exchanged.
+
+ Important: When a router receives DBD from other router, it compares its own
+DBD with the other router DBD. If the received DBD is more updated than its
+own DBD then the router will send LSR to the other router stating what links
+are needed. The other router replies with the LSU containing the updates that
+are needed. In return to this, the router replies with the LSA (Link State
+Acknowledgement).
+
+ Full: In this state, synchronization of all the information takes place. OSPF
+routing can begin only after the Full state.
+
+
+
+Network Layer - border gateway protocol (BGP)
+
+ The protocol can connect any internetwork of the autonomous system (AS)
+using an arbitrary topology. The only requirement is that each AS have at least
+one router that can run BGP and that is the router connected to at least one
+other AS’s BGP router. BGP’s main function is to exchange network
+reachability information with other BGP systems. Border Gateway Protocol
+constructs an autonomous systems graph based on the information
+exchanged between BGP routers.
+
+ Characteristics of Border Gateway Protocol (BGP)
+
+ Inter-Autonomous System Configuration: The main role of BGP is to provide
+communication between two autonomous systems.
+
+ BGP supports the Next-Hop Paradigm.
+
+ Coordination among multiple BGP speakers within the AS (Autonomous
+System).
+
+ Path Information: BGP advertisements also include path information, along
+with the reachable destination and next destination pair.
+
+ Policy Support: BGP can implement policies that can be configured by the
+administrator. For ex:- a router running BGP can be configured to distinguish
+between the routes that are known within the AS and that which are known
+from outside the AS.
+
+
+
+Network Layer - border gateway protocol (BGP)
+
+ Types of Border Gateway Protocol
+
+ External BGP: It is used to interchange routing information between the 
+routers in different autonomous systems, it is also known as eBGP(External 
+Border Gateway Protocol). The below image shows how eBGP interchange 
+routing information.
+
+ Internal BGP: It is used to interchange routing information between the routers 
+in the same autonomous system, it is also known as iBGP(Internal Border 
+Gateway Protocol). Internal routers also ensure consistency among routers for 
+sharing routing information. The below image shows how iBGP interchange 
+routing information.
+
+
+
+Network Layer - border 
+ Elements of BGP gateway protocol 
+ Some elements of to each path and these elements help routers to select a path
+
+from multiple paths. Here below are some elements of BGP:
+
+ Weight: Weight is defined as a Cisco-specific attribute that tells a router which
+path is preferred. The weight having a higher value is preferred.
+
+ Originate: This tells how a router choose routes and adds to BGP itself.
+
+ Local Preference: Local Preference is an element used to select the outbound
+routing path. Greater local preference is preferred.
+
+ Autonomous System Path: This element tells the router to select a path having
+a shorter length.
+
+ Next Hop: To reach the destination the next hop elements specify the IP
+address that should be used as the next hop.
+
+ BGP Route Information Management Functions:
+
+ Route Storage: Each BGP stores information about how to reach other
+networks.
+
+ Route Update: In this task, Special techniques are used to determine when and
+how to use the information received from peers to properly update the routes.
+
+ Route Selection: Each BGP uses the information in its route databases to select
+good routes to each network on the internet network.
+
+ Route advertisement: Each BGP speaker regularly tells their peer what is
+known about various networks and methods to reach them.
+
+
+
+Network Layer - border gateway protocol (BGP)
+
+ Difference Between BGP and OSPF
+
+BGP OSPF
+
+It follows the Path Vector Routing It follows the Link State Routing
+Algorithm Algorithm
+
+The speed of convergence is very The speed of convergence is fast
+slow in BGP in the case of OSPF
+
+BGP is also called inter-domain OSPF is also called intra-domain
+routing protocol routing protocol
+
+In BGP routing operation is In OSPF routing operation is
+performed between two performed inside an autonomous
+autonomous system (AS) system (AS)
+
+In BGP, TCP protocol is used In OSPF, IP protocol is used
+
+
+
+Network Layer - Enhanced Interior Gateway 
+Routing Protocol (EIGRP)
+ Enhanced Interior Gateway Routing Protocol (EIGRP) is a dynamic routing
+
+protocol that is used to find the best path between any two-layer 3 devices
+to deliver the packet. EIGRP works on network layer Protocol of OSI model
+and uses protocol number 88. It uses metrics to find out the best path between
+two layer 3 devices (router or layer 3 switches) operating EIGRP.
+Administrative Distance for EIGRP are:-
+
+EIGRP routes AD values
+Summary Routes 5
+Internal Routes 90
+external routes 170
+
+It uses some messages to communicate with the neighbour devices that operate
+EIGRP. These are:-
+
+ Hello message: These messages are kept alive messages which are exchanged
+between two devices operating EIGRP. These messages are used for neighbour
+discovery/recovery, if there is any device operating EIGRP or if any
+device(operating EIGRP) coming up again.
+
+These messages are used for neighbor discovery if multicast at 224.0.0.10. It
+contains values like AS number, k values, etc.
+
+These messages are used as acknowledgement when unicast. A hello with no data
+is used as the acknowledgement.
+
+
+
+Network Layer – EIGRP Messages
+
+ NULL update: It is used to calculate SRTT (Smooth Round Trip Timer) and
+
+RTO(Retransmission Time Out).
+
+ SRTT: The time is taken by a packet to reach the neighboring router and
+
+the acknowledgement of the packet to reach the local router.
+
+ RTO: If a multicast fails then unicast is being sent to that router. RTO is
+
+the time for which the local router waits for an acknowledgement of the
+
+packet.
+
+ Full Update: After exchanging hello messages or after the neighbourship is
+
+formed, these messages are exchanged. This message contains all the best
+
+routes.
+
+ Partial update: These messages are exchanged when there is a topology change
+
+and new links are added. It contains only the new routes, not all the routes.
+
+These messages are multicast.
+
+
+
+Network Layer – EIGRP Messages
+
+ Query message: These messages are multicast when the device is declared
+
+dead and it has no routes to it in its topology table.
+
+ Reply message: These messages are the acknowledgment of the query
+
+message sent to the originator of the query message stating the route to the
+
+network which has been asked in the query message.
+
+ Acknowledgement message:
+
+It is used to acknowledge EIGRP updates, queries, and replies. Acks are hello
+
+packets that contain no data.
+
+Note:- Hello and acknowledgment packets do not require any acknowledgment.
+
+Reply, query, update messages are reliable messages i.e require acknowledgement.
+
+
+
+Network Layer - Enhanced Interior Gateway 
+Routing Protocol (EIGRP)
+
+ Composite matrix: The EIGRP composite metric calculation can use up to 5
+variables, but only 2 are used by default (K1 and K3).
+
+ The composite metric values are:
+
+ K1 (bandwidth)
+
+ K2 (load)
+
+ K3 (delay)
+
+ K4 (reliability)
+
+ K5 (MTU)
+
+ The lowest bandwidth, load, delay, reliability, MTU along the path between
+the source and the destination is considered in the composite matrix in order to
+calculate the cost.
+
+ Note:- Generally, only k1 and k3 values are used for metric calculation by
+EIGRP. The values are 10100 for k1, k2, k3, k4, k5 respectively.
+
+
+
+Network Layer - Enhanced Interior Gateway 
+Routing Protocol (EIGRP)
+
+ Criteria to form EIGRP neighbourship, these criteria should be fulfilled:-
+
+ k values should match.
+
+ Autonomous system number should match. (AS is a group of networks
+running under a single administrative control) .
+
+ authentication should match (if applied). EIGRP supports MD5
+authentication only.
+
+ subnet mask should be the same.
+
+ EIGRP Timers:-
+
+ Hello timer: The interval in which EIGRP sends a hello message on an
+interface. It is 5 seconds by default.
+
+ Dead timer: The interval in which the neighbor will be declared dead if it
+is not able to send the hello packet. It is 15 seconds by default.
+
+
+
+Prof. Dr. SHAKTI KUNDU
+
+Computer Networks and Data Communication
+
+2026

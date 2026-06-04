@@ -1,0 +1,79 @@
+Computer Networks and Data Communication (CS212)
+
+Module 1: Introduction
+- Computer Networks
+- Internet
+- Services and Protocols
+- RFCs
+- Networking Standards
+- Data Communication
+- Communication Channels
+- Network Devices
+- Network Topologies
+- OSI Model
+- TCP/IP Model
+
+Module 2: Physical Layer
+- Physical Layer Functions
+- Guided Transmission Media
+- Unguided Transmission Media
+- ISDN
+- ATM
+
+Module 3: Data Link Layer
+- Flow Control
+- Stop and Wait ARQ
+- Go Back N
+- Selective Repeat
+- Error Detection
+- Hamming Code
+- VRC
+- LRC
+- CRC
+- Checksum
+- MAC Addresses
+- Switching Techniques
+- ALOHA
+- Slotted ALOHA
+- CSMA/CD
+- CSMA/CA
+- FDMA
+- TDMA
+- CDMA
+- Ethernet
+- WiFi
+
+Module 4: Network Layer
+- IPv4
+- IPv6
+- ARP
+- ICMP
+- IGMP
+- Subnetting
+- FLSM
+- VLSM
+- CIDR
+- RIP
+- OSPF
+- BGP
+- EIGRP
+
+Module 5: Transport and Application Layer
+- UDP
+- TCP
+- TCP Connection Establishment
+- TCP Connection Termination
+- TCP Congestion Control
+- HTTP
+- Email
+- SMTP
+- P2P Networks
+
+Module 6: Advanced Computer Networks
+- Network Optimization
+- Mathematical Models
+- MANET
+- WSN
+- PCN
+- SDN
+- IoT

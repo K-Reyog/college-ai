@@ -1,0 +1,2172 @@
+﻿Computer Networks and Data 
+Communication
+
+Module 1
+
+CS 212
+
+Prof. (Dr.) SHAKTI KUNDU
+
+Jan-May 2026
+
+
+
+Module wise CONTENTS:
+ Module 1 - Introduction: An overview of networks, the Internet, services and protocols, RFCs 
+
+and standards of Networking, Data communication & its components, types of data 
+communication and communication channels. Key components of computer network; network 
+devices; types of computer networks; network topology; reference models (Network 
+Architectures) – OSI & TCP/IP.
+
+ Module 2 - Physical Layer: Introduction and functions; types of transmission media – guided 
+and unguided; integrated services digital network (ISDN); asynchronous transfer mode (ATM).
+
+ Module 3 - Data Link Layer: Overview; sliding window protocols - Stop-&-Wait; Go-Back-N,
+Selective Repeat; Error detection and correction; Hamming Code, LRC, VRC, CRC,
+Checksum, Round Trip Time, Latency (Delay); Medium Access Sublayer: medium access
+control (MAC) Addresses; Switching techniques - circuit, message & packet; Random Access
+Protocols - Pure ALOHA, Slotted ALOHA, CSMA / CD, CSMA / CA; Controlled Access
+Protocols – FDMA, TDMA, CDMA; Channelization Protocols – Reservation, Polling, Token
+Passing; Ethernet (802.3 IEEE standard), Wireless Links, Wireless LAN - WiFi (802.11).
+
+ Module 4 - Network Layer: Introduction; address resolution protocol (ARP); internet protocol
+(IP); internet control message protocol (ICMP); internet group management protocol (IGMP);
+IPv4 addressing, representation of IPv6; IPv4 vs IPv6; Conversion IPv4 to IPv6; Routing
+Protocols - routing information protocol (RIP), open shortest path first (OSPF); border gateway
+protocol (BGP); Enhanced Interior Gateway Routing Protocol (EIGRP).
+
+ Module 5 - Transport Layer: Introduction; transport layer protocols - UDP & TCP, TCP
+connection establishment; TCP connection termination; TCP congestion control. Application
+Layer: Introduction – features & functions; application layer protocols; Web and HTTP, Email,
+P2P network, its types & applications.
+
+ Module 6 – Network Optimization, Mathematical Models, Introduction Advance Computer
+Networks, MANET, WSN, PCN, SDN, IoT.
+
+
+
+ Module 1 - Introduction: An overview of networks, the Internet, services and 
+protocols, RFCs and standards of Networking, Data communication & its 
+components, types of data communication and communication channels. Key 
+components of computer network; network devices; types of computer 
+networks; network topology; reference models (Network Architectures) – OSI 
+& TCP/IP.
+
+
+
+An overview of computer networks
+
+ A computer network is a collection of interconnected devices (computers,
+
+servers, routers, switches, smartphones, etc.) that communicate and exchange data
+
+using a set of rules called protocols.
+
+
+
+An overview of computer networks
+Types of Networks
+
+a. By Geographical Size
+
+ LAN (Local Area Network):
+Covers a small area—home, office, school.
+
+ WAN (Wide Area Network):
+Covers large areas—countries or continents (e.g., the Internet).
+
+ MAN (Metropolitan Area Network):
+Spans a city or campus.
+
+
+
+An overview of computer networks
+
+Types of Networks
+
+b. By Architecture
+
+ Client–Server:
+Central server provides services; clients request them.
+
+ Peer-to-Peer (P2P):
+Each device acts as both client and server.
+
+
+
+An overview of computer networks
+
+Key Networking Devices
+
+ Router: Connects networks and directs traffic.
+
+ Switch: Connects devices within a LAN.
+
+ Access Point: Provides wireless connectivity.
+
+ Modem: Converts signals for Internet access.
+
+
+
+An overview of computer networks
+
+Network Topologies
+
+ The physical or logical arrangement of devices:
+
+ Bus – single communication line
+
+ Ring – devices in a circular layout
+
+ Star – all devices connected to a central switch (most common)
+
+ Mesh – every device connects to many others (high reliability)
+
+
+
+An overview of computer networks
+
+Network Topologies
+
+ The physical or logical arrangement of devices:
+
+ Bus – single communication line
+
+ Ring – devices in a circular layout
+
+ Star – all devices connected to a central switch (most common)
+
+ Mesh – every device connects to many others (high reliability)
+
+
+
+An overview of computer networks
+
+Network Topologies
+
+ The physical or logical arrangement of devices:
+
+ Bus – single communication line
+
+ Ring – devices in a circular layout
+
+ Star – all devices connected to a central switch (most common)
+
+ Mesh – every device connects to many others (high reliability)
+
+
+
+An overview of computer networks
+
+Network Topologies
+
+ The physical or logical arrangement of devices:
+
+ Bus – single communication line
+
+ Ring – devices in a circular layout
+
+ Star – all devices connected to a central switch (most common)
+
+ Mesh – every device connects to many others (high reliability)
+
+
+
+An overview of computer networks
+
+Communication Protocols - Protocols define how data is transmitted.
+
+ TCP/IP Model Layers
+
+ Application Layer – HTTP, FTP, DNS
+
+ Transport Layer – TCP (reliable), UDP (fast)
+
+ Internet Layer – IP addressing, routing
+
+ Network Access Layer – Ethernet, Wi-Fi
+
+
+
+An overview of computer networks
+
+Communication Protocols - Protocols define how data is transmitted.
+
+ TCP/IP Model Layers
+
+ Application Layer – HTTP, FTP, DNS
+
+ Transport Layer – TCP (reliable), UDP (fast)
+
+ Internet Layer – IP addressing, routing
+
+ Network Access Layer – Ethernet, Wi-Fi
+
+
+
+An overview of computer networks
+Communication Protocols - Protocols define how data is transmitted.
+
+ TCP/IP Model Layers
+
+ Application Layer – HTTP, FTP, DNS
+
+ Transport Layer – TCP (reliable), UDP (fast)
+
+ Internet Layer – IP addressing, routing
+
+ Network Access Layer – Ethernet, Wi-Fi
+
+
+
+An overview of computer networks
+
+Network Security
+
+ Essential for protecting data from cyber threats.
+
+ Common mechanisms:
+ Firewalls
+
+ Encryption (e.g., HTTPS)
+
+ Authentication systems
+
+ VPNs
+
+
+
+An overview of computer networks
+
+Wireless vs. Wired Networks
+
+ Wired (Ethernet): Faster, more secure, stable
+
+ Wireless (Wi-Fi): Convenient, flexible, but more prone to interference and 
+
+security risks
+
+The Internet
+
+ A global network of networks using TCP/IP.
+
+It supports services like:
+
+ Web browsing
+
+ Email
+
+ Cloud platforms
+
+ Streaming
+
+ Online gaming
+
+
+
+the Internet
+
+ The Internet is a global system of interconnected computer networks. It allows
+millions of private, public, academic, business, and government networks to
+communicate with each other, enabling information to be shared instantly across
+the world.
+
+
+
+the Internet
+
+How the Internet Works
+
+1. Networks Connected Together
+
+ Individual networks (homes, schools, companies) connect to Internet Service 
+Providers (ISPs).
+ISPs connect to larger networks, forming a massive worldwide web of 
+connections.
+
+2. IP Addresses
+
+ Every device on the Internet has an IP address, which acts like its digital home 
+address.
+This allows data to know where it needs to go.
+
+3. Packets
+
+ Information sent over the Internet is broken into tiny pieces called data packets.
+Each packet may travel a different route but is reassembled at the destination.
+
+4. Routers
+
+ Routers direct packets across networks, choosing the best path for fast delivery.
+
+
+
+the Internet
+
+Key Internet Services
+
+ World Wide Web (WWW): Websites and web pages accessed through 
+browsers.
+
+ Email: Sending and receiving digital messages.
+
+ Streaming: Watching videos or listening to music online.
+
+ Social Networks: Platforms for communication and sharing content.
+
+ Cloud Computing: Storing and processing data on remote servers.
+
+ Online Gaming: Real-time multiplayer interactions.
+
+Why the Internet Is Important
+
+ Enables global communication
+
+ Supports business, research, and education
+
+ Provides instant access to information
+
+ Connects devices in the “Internet of Things”
+
+ Powers modern apps and services
+
+
+
+Services and Protocols
+
+Common Internet Services and Their Protocols
+
+1. World Wide Web (WWW) Service: Accessing web pages, images, videos, and 
+online applications
+
+ Protocols:
+
+ HTTP (Hypertext Transfer Protocol): Basic communication between 
+browser and web server
+
+ HTTPS: Secure version of HTTP using encryption
+
+2. Email Service: Sending and receiving electronic messages
+
+ Protocols:
+
+ SMTP (Simple Mail Transfer Protocol): Sends email
+
+ POP3 (Post Office Protocol v3): Downloads mail from server to device
+
+ IMAP (Internet Message Access Protocol): Lets you view and manage mail 
+while stored on the server
+
+
+
+Services and Protocols
+
+Common Internet Services and Their Protocols
+
+3. Remote Access Service: Controlling a device from another location
+
+ Protocols:
+
+ SSH (Secure Shell): Secure remote login
+
+ Telnet: Older, insecure remote access protocol
+
+ RDP (Remote Desktop Protocol): Graphical remote connection 
+(Windows)
+
+4. File Transfer Service: Uploading and downloading files
+
+ Protocols:
+
+ FTP (File Transfer Protocol): Transfers files between systems
+
+ SFTP/FTPS: Secure versions of FTP
+
+ TFTP (Trivial File Transfer Protocol): Simplified, often used for network 
+booting
+
+
+
+Services and Protocols
+
+Common Internet Services and Their Protocols
+
+5. Domain Name System (DNS) Service: Converts human-friendly names (e.g., 
+google.com) into IP addresses
+
+ Protocol:
+
+ DNS: Uses UDP/TCP to query and respond with IP information
+
+6. Streaming and Real-Time Communication Service: Live audio, video, or 
+gaming
+
+ Protocols:
+
+ RTP (Real-Time Transport Protocol): Delivers audio/video
+
+ RTSP (Real-Time Streaming Protocol): Controls stream playback
+
+ WebRTC: Real-time peer-to-peer communication (video calls)
+
+
+
+RFCs
+
+ RFCs (Requests for Comments) are official documents that describe the rules,
+standards, procedures, and technologies that define how the Internet works. They
+are published by the Internet Engineering Task Force (IETF) and related
+groups.
+
+ Although the name “Request for Comments” sounds informal, RFCs are actually
+the authoritative standards that govern Internet technologies such as TCP/IP,
+HTTP, DNS, email protocols, and many more.
+
+
+
+RFCs
+
+What RFCs Are Used For
+
+ RFCs serve several important purposes
+
+1. Internet Standards
+
+ Many foundational Internet protocols are defined in RFCs, such as:
+
+ RFC 791 – IPv4
+
+ RFC 2460 / 8200 – IPv6
+
+ RFC 761 / 793 – TCP
+
+ RFC 2616 / 7230 – HTTP/1.1
+
+ These documents specify how protocols should behave to ensure compatibility
+across devices and networks.
+
+
+
+RFCs
+
+2. Protocol Design
+
+ When engineers create new networking protocols or update existing ones, they 
+write an RFC that describes:
+
+ How the protocol works
+
+ The format of messages
+
+ Expected behavior
+
+ Security considerations
+
+3. Documentation and Guidance
+
+ Some RFCs provide best-practice guidelines rather than formal standards. For 
+example:
+
+ Email formatting rules
+
+ Network security recommendations
+
+ Routing architecture
+
+
+
+RFCs
+
+Types of RFCs
+
+ RFCs are categorized into different types:
+
+1. Standards Track
+
+ These may become Internet Standards.
+Levels include:
+
+ Proposed Standard
+
+ Draft Standard
+
+ Internet Standard (STD)
+
+2. Informational
+
+ Provides general information, guidance, or explanations.
+
+3. Experimental
+
+ Describes new ideas being tested.
+
+4. Historic
+
+ Outdated or superseded RFCs.
+
+
+
+RFCs
+
+ How RFCs are Created
+
+ An idea is proposed within IETF working groups.
+
+ Engineers write drafts and revise them.
+
+ The document is reviewed by experts.
+
+ When agreed upon, it is published as an RFC.
+
+ RFCs never change once released—newer RFCs simply update or obsolete
+older ones.
+
+ Why RFCs Matter
+
+ They ensure interoperability among Internet devices.
+
+ They provide transparency in how the Internet functions.
+
+ They create a shared reference for developers, researchers, and network 
+engineers.
+
+ They preserve the historical evolution of internet technologies.
+
+
+
+Standards of Networking
+
+ Networking standards are agreed-upon rules and specifications that ensure
+computers, devices, and network technologies can work together reliably. Without
+standards, devices from different companies would not be able to communicate,
+and the Internet as we know it would not exist.
+
+ Standards define how data is transmitted, how hardware should operate, and how
+communication protocol's function.
+
+Why Networking Standards are Important
+
+ Interoperability: Devices from different manufacturers work together
+
+ Compatibility: Old and new technologies can coexist
+
+ Reliability: Networks function predictably
+
+ Scalability: Networks can grow without breaking
+
+ Security: Standards embed secure practices into systems
+
+ Global consistency: The Internet works the same worldwide
+
+
+
+Standards of Networking
+
+Major Organizations that create Networking Standards
+
+1. IEEE (Institute of Electrical and Electronics Engineers)
+
+ IEEE develops many networking standards, especially for physical and data link 
+layers.
+
+ Examples:
+
+ IEEE 802.3 — Ethernet
+
+ IEEE 802.11 — Wi-Fi
+
+ IEEE 802.15 — Bluetooth and PAN technologies
+
+2. IETF (Internet Engineering Task Force)
+
+ Responsible for Internet standards, especially TCP/IP protocols.
+Publishes RFCs (Requests for Comments), many of which become Internet 
+standards.
+
+ Examples:
+
+ TCP, UDP, IP protocols
+
+ DNS
+
+ HTTP, SMTP, FTP rules
+
+
+
+Standards of Networking
+Major Organizations that create Networking Standards
+
+3. ISO (International Organization for Standardization)
+
+ Creates international standards, including the famous OSI Model, which guides 
+network design.
+
+ Example:
+
+ ISO/IEC 7498 — OSI Reference Model
+
+4. ITU-T (International Telecommunication Union – Telecommunication 
+Standardization Sector)
+
+ Focuses on telecommunications and global communication standards.
+
+ Examples:
+
+ Telephone systems
+
+ Broadband standards
+
+ Video conferencing protocols (e.g., H.323)
+
+5. W3C (World Wide Web Consortium)
+
+ Develops standards for the World Wide Web.
+
+ Examples:
+
+ HTML, CSS
+
+ Web accessibility
+
+ Web architecture guidelines
+
+
+
+Standards of Networking
+
+Examples of important Networking Standards
+
+ Ethernet (IEEE 802.3): Defines wired LAN technology
+
+ Wi-Fi (IEEE 802.11): Defines wireless LAN communication
+
+ IPv4 and IPv6: Internet addressing protocols
+
+ HTTPS: Secure web communication
+
+ USB standards: For device connectivity
+
+ 5G/4G standards: Mobile communication
+
+How Standards Improve Networking
+
+ Reduce equipment cost through uniformity
+
+ Allow innovation by providing a common framework
+
+ Enable large-scale systems like cloud computing and the global Internet
+
+ Improve security and reliability
+
+
+
+Data Communication – Definition, Components, 
+
+Types, Channels
+
+ Definition
+
+ Communication is defined as a process in which more than one computer
+
+transfers information, instructions to each other and for sharing resources.
+
+ Or in other words, communication is a process or act in which we can send or
+
+receive data.
+
+ A network of computers is defined as an interconnected collection of autonomous
+
+computers. Autonomous means no computer can start, stop or control another
+
+computer.
+
+
+
+Data Communication
+
+ Components of Data Communication
+
+ A communication system is made up of the following components:
+
+ Message: A message is a piece of information that is to be transmitted from one
+
+person to another. It could be a text file, an audio file, a video file, etc.
+
+ Sender: It is simply a device that sends data messages. It can be a computer,
+
+mobile, telephone, laptop, video camera, or workstation, etc.
+
+ Receiver: It is a device that receives messages. It can be a computer, telephone
+
+mobile, workstation, etc.
+
+ Transmission Medium / Communication Channels: Communication channels are
+
+the medium that connect two or more workstations. Workstations can be
+
+connected by either wired media or wireless media.
+
+ Set of rules (Protocol): When someone sends the data (The sender), it should be
+understandable to the receiver also otherwise it is meaningless. For example,
+Sonali sends a message to Chetan. If Sonali writes in Hindi and Chetan cannot
+understand Hindi, it is a meaningless conversation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Data Communication
+
+ Types of data communication
+
+ Simplex Communication: It is one-way communication or we can say that
+
+unidirectional communication in which one device only receives and another
+
+device only sends data and devices uses their entire capacity in transmission. For
+
+example, IoT, entering data using a keyboard, listing music using a speaker, etc.
+
+ Half Duplex communication: It is a two-way communication, or we can say that it
+
+is a bidirectional communication in which both the devices can send and receive
+
+data but not at the same time. When one device is sending data then another
+
+device is only receiving and vice-versa. For example, walkie-talkie.
+
+ Full-duplex communication: It is a two-way communication or we can say that it
+
+is a bidirectional communication in which both the devices can send and receive
+
+data at the same time. For example, mobile phones, landlines, etc.
+
+
+
+Data Communication
+
+ Communication Channels
+
+ Communication channels are the medium that connects two or more workstations.
+
+Workstations can be connected by either wired media or wireless media. It is also
+
+known as a transmission medium. The transmission medium or channel is a link
+
+that carries messages between two or more devices.
+
+ We can group the communication media into two categories:
+
+ Guided media transmission
+
+ Unguided media transmission
+
+
+
+Data Communication
+
+ Communication Media
+
+ There are 3 major types of Guided Media: Twisted pair cable, Coaxial cable,
+
+Optical fiber cable
+
+ Twisted Pair Cable
+
+ It consists of 2 separately insulated conductor wires wound about each other.
+
+Generally, several such pairs are bundled together in a protective sheath. They are
+
+the most widely used Transmission Media.
+
+ Twisted Pair is of two types:
+
+ Unshielded Twisted Pair (UTP)
+
+ Shielded Twisted Pair (STP)
+
+
+
+Data Communication
+
+ Twisted Pair is of two types:
+
+ Unshielded Twisted Pair (UTP): UTP consists of two insulated copper wires
+
+twisted around one another. This type of cable has the ability to block interference
+
+and does not depend on a physical shield for this purpose. It is used for telephonic
+
+applications.
+
+ Shielded Twisted Pair (STP): This type of cable consists of a special jacket (a
+
+copper braid covering or a foil shield) to block external interference. It is used in
+
+fast-data-rate Ethernet and in voice and data channels of telephone lines.
+
+
+
+Data Communication
+
+ Coaxial Cable
+
+ It has an outer plastic covering containing an insulation layer made of PVC or
+
+Teflon and 2 parallel conductors each having a separate insulated protection
+
+cover. The coaxial cable transmits information in two modes: Baseband mode
+
+(dedicated cable bandwidth) and Broadband mode (cable bandwidth is split into
+
+separate ranges). Cable TVs and analog television networks widely use Coaxial
+
+cables.
+
+
+
+Data Communication
+
+ Optical Fiber Cable
+
+ Optical Fibre Cable uses the concept of refraction of light through a core made up
+
+of glass or plastic. The core is surrounded by a less dense glass or plastic covering
+
+called the cladding. It is used for the transmission of large volumes of data. The
+
+cable can be unidirectional or bidirectional. The WDM (Wavelength Division
+
+Multiplexer) supports two modes, namely unidirectional and bidirectional mode.
+
+
+
+Data Communication
+
+ Communication Media
+
+ There are 3 major types of Unguided Media: Radio waves, Microwaves, Infrared
+
+ Radio Waves
+
+ Radio waves are easy to generate and can penetrate through buildings. The
+
+sending and receiving antennas need not be aligned. Frequency Range: 3KHz –
+
+1GHz. AM and FM radios and cordless phones use Radio waves for transmission.
+
+
+
+Data Communication
+
+ Microwaves
+
+ It is a line of sight transmission i.e. the sending and receiving antennas need to be
+
+properly aligned with each other. The distance covered by the signal is directly
+
+proportional to the height of the antenna. Frequency Range: 1GHz – 300GHz.
+
+Micro waves are majorly used for mobile phone communication and television
+
+distribution.
+
+
+
+Data Communication
+
+ Infrared
+
+ Infrared waves are used for very short distance communication. They cannot
+
+penetrate through obstacles. This prevents interference between systems.
+
+Frequency Range: 300GHz – 400THz. It is used in TV remotes, wireless mouse,
+
+keyboard, printer, etc.
+
+
+
+Computer Network
+
+ Computer Network: A computer network is a system that connects many
+
+independent computers to share information (data) and resources. The integration
+
+of computers and other different devices allows users to communicate more
+
+easily.
+
+ A computer network is a collection of two or more computer systems that are
+
+linked together. A network connection can be established using either cable or
+
+wireless media. Hardware and software are used to connect computers and tools
+
+in any network.
+
+
+
+Key components of Computer Network
+
+ Key components of a Computer Network: In simple terms, a computer network is
+
+made up of two main parts: devices (called nodes) and connections (called links).
+
+The links connect the devices to each other. The rules for how these connections
+
+send information are called communication protocols. The starting and ending
+
+points of these communications are often called ports.
+
+
+
+Network Devices
+
+1. Network Devices
+
+ Basic hardware interconnecting network nodes, such as Network Interface Cards
+
+(NICs), Bridges, Hubs, Switches, and Routers, are used in all networks. In
+
+addition, a mechanism for connecting these building parts is necessary, which is
+
+usually galvanic cable and optical cable are less popular (“optical fiber”). The
+
+following are the network devices:
+
+ NIC (Network Interface Card): A network card, often known as a network adapter
+
+or NIC (network interface card), is computer hardware that enables computers to
+
+communicate via a network. It offers physical access to networking media and, in
+
+many cases, MAC addresses serve as a low-level addressing scheme. Each
+
+network interface card has a distinct identifier. This is stored on a chip that is
+
+attached to the card.
+
+
+
+Network Devices
+
+ Repeater: A repeater is an electrical device that receives a signal, cleans it of
+
+unwanted noise, regenerates it, and retransmits it at a higher power level or to the
+
+opposite side of an obstruction, allowing the signal to travel greater distances
+
+without degradation. In the majority of twisted pair Ethernet networks, Repeaters
+
+are necessary for cable lengths longer than 100 meters in some systems. Repeaters
+
+are based on physics.
+
+ Hub: A hub is a device that joins together many twisted pairs or fiber optic
+
+Ethernet devices to give the illusion of a formation of a single network segment.
+
+The device can be visualized as a multiport repeater. A network hub is a relatively
+
+simple broadcast device. Any packet entering any port is regenerated and
+
+broadcast out on all other ports, and hubs do not control any of the traffic that
+
+passes through them. Packet collisions occur as a result of every packet being sent
+
+out through all other ports, substantially impeding the smooth flow of
+
+communication.
+
+
+
+Network Devices
+
+ Bridges: Bridges broadcast data to all the ports but not to the one that received the
+
+transmission. Bridges, on the other hand, learn which MAC addresses are
+
+reachable through specific ports rather than copying messages to all ports as hubs
+
+do. Once a port and an address are associated, the bridge will only transport traffic
+
+from that address to that port.
+
+ Switches: A switch differs from a hub in that it only forwards frames to the ports
+
+that are participating in the communication, rather than all of the ports that are
+
+connected. The collision domain is broken by a switch, yet the switch depicts
+
+itself as a broadcast domain. Frame-forwarding decisions are made by switches
+
+based on MAC addresses.
+
+
+
+ A Collision Domain is a scenario in which when a device sends out a message
+to the network, all other devices which are included in its collision domain
+have to pay attention to it, no matter if it was destined for them or not. This
+causes a problem because, in a situation where two devices send out their
+messages simultaneously, a collision will occur leading them to wait and re-
+transmit their respective messages, one at a time. Remember, it happens only
+in the case of a half-duplex mode.
+
+ A Broadcast Domain is a scenario in which when a device sends out a
+broadcast message, all the devices present in its broadcast domain have to pay
+attention to it. This creates a lot of congestion in the network, commonly
+called LAN congestion, which affects the bandwidth of the users present in
+that network.
+
+ From this, we can realize that the more the number of collision domains and
+the more the number of broadcast domains, the more efficient is the network
+providing better bandwidth to all its users.
+
+
+
+Advantages of Collision Domain:
+
+ High Network Performance: Collision Domain helps to improve network
+performance by reducing collisions on the network, which can improve data
+transmission and reduce packet loss.
+
+Disadvantages of Collision Domain:
+
+ Limited Scalability: Collision Domain may not be scalable in larger networks,
+as the number of devices connected to the network increases, which can lead
+to network congestion and performance degradation.
+
+Advantages of Broadcast Domain:
+
+ Efficient Network Communication: Broadcast Domain enables efficient
+network communication by allowing multiple devices to receive the same
+message simultaneously.
+
+Disadvantages of Broadcast Domain:
+
+ Increased Network Congestion: Broadcast Domain can lead to increased
+network congestion, particularly in larger networks, which can impact network
+performance and lead to packet loss.
+
+
+
+ A router not only breaks collision domains but also breaks broadcast domains,
+which means it is both collisions as well as broadcast domain separators. A
+router creates a connection between two networks. A broadcast message from
+one network will never reach the other one as the router will never let it pass.
+
+ Also, as repeaters and bridges differ from hubs and switches only in terms of
+the number of ports, a repeater does not break collision and broadcast
+domains, while a bridge breaks only collision domains.
+
+
+
+Network Devices
+
+ Routers: Routers are networking devices that use headers and forwarding tables to
+
+find the optimal way to forward data packets between networks. A router is a
+
+computer networking device that links two or more computer networks and
+
+selectively exchanges data packets between them. A router can use address
+
+information in each data packet to determine if the source and destination are on
+
+the same network or if the data packet has to be transported between networks.
+
+Gateways: To provide system compatibility, a gateway may contain devices such
+
+as protocol translators, impedance-matching devices, rate converters, fault
+
+isolators, or signal translators. It also necessitates the development of
+
+administrative procedures that are acceptable to both networks. By completing the
+
+necessary protocol conversions, a protocol translation / mapping gateway joins
+
+networks that use distinct network protocol technologies.
+
+
+
+Key components of computer network – network 
+devices
+
+
+
+Key components of computer network – links
+
+2. Links
+
+ Links are the ways information travels between devices, and they can be of two
+
+types:
+
+ Wired: Communication done in a wired medium. Copper wire, twisted pair, or
+
+fiber optic cables are all options. A wired network employs wires to link devices
+
+to the Internet or another network, such as laptops or desktop PCs.
+
+ Wireless: Wireless means without wire, media that is made up of electromagnetic
+
+waves (EM Waves) or infrared waves. Antennas or sensors will be present on all
+
+wireless devices. For data or voice communication, a wireless network uses radio
+
+frequency waves rather than wires.
+
+
+
+Key components of computer network –
+communication protocols
+
+3. Communication Protocols
+
+ A communication protocol is a set of rules that all devices follow when they share
+
+information. Some common protocols are TCP/IP, IEEE 802, Ethernet, wireless
+
+LAN, and cellular standards. TCP/IP is a model that organizes how
+
+communication works in modern networks. It has four functional layers for these
+
+communication links:
+
+ Network Access Layer: This layer controls how data is physically transferred,
+
+including how hardware sends data through wires or fibers.
+
+ Internet Layer: This layer packages data into understandable packets and ensures
+
+it can be sent and received.
+
+ Transport Layer: This layer keeps the communication between devices steady and
+
+reliable.
+
+ Application Layer: This layer allows high-level applications to access the network
+
+to start data transfer.
+
+
+
+Key components of computer network –
+
+communication protocols
+
+ Most of the modern internet structure is based on the TCP/IP model, although the
+
+similar seven-layer OSI model still has a strong influence.
+
+ IEEE 802 is a group of standards for local area networks (LAN) and metropolitan
+
+area networks (MAN). The most well-known member of the IEEE 802 family is
+
+wireless LAN, commonly known as WLAN or Wi-Fi.
+
+
+
+Key components of computer network – network 
+defense
+
+4. Network Defense
+
+ While nodes, links, and protocols are the building blocks of a network, a modern
+
+network also needs strong defenses.
+
+ Security is crucial because huge amounts of data are constantly being created,
+
+moved, and processed.
+
+ Some examples of network defense tools are firewalls, intrusion detection systems
+
+(IDS), intrusion prevention systems (IPS), network access control (NAC), content
+
+filters, proxy servers, anti-DDoS devices, and load balancers.
+
+
+
+Criteria of a good network
+
+ Criteria of a Good Network
+
+ Performance: It can be measured in many ways, including transmit time and
+
+response time. Transit time is the amount of time required for a message to travel
+
+from one device to another. Response time is the elapsed time between an inquiry
+
+and a response. The performance of the network depends on a number of factors,
+
+including the number of users, the type of medium & Hardware.
+
+ Reliability: In addition to accuracy is measured by frequency of failure, the time it
+
+takes a link to recover from failure, and the network’s robustness in catastrophe.
+
+ Security: Network security issues include protecting data from unauthorized
+
+access, protecting data from damage and development, and implementing policies
+
+and procedures for recovery from breaches and data loss.
+
+
+
+Types of computer network
+
+ Types of Computer Networks - Division Based on Area Covered
+
+ Local Area Network (LAN): A LAN is a network that covers an area of around 10
+
+kilometers. For example, a college network or an office network. Depending upon
+
+the needs of the organization, a LAN can be a single office, building, or Campus.
+
+Each host in LAN has an identifier, an address that defines hosts in LAN. A
+
+packet sent by the host to another host carries both the source host’s and the
+
+destination host’s address.
+
+ Metropolitan Area Network (MAN): MAN refers to a network that covers an
+
+entire city. For example: consider the cable television network.
+
+ Wide Area Network (WAN): WAN refers to a network that connects countries or
+
+continents. For example, the Internet allows users to access a distributed system
+
+called www from anywhere around the globe. WAN interconnects connecting
+
+devices such as switches, routers, or modems.
+
+
+
+Types of computer network 
+
+ Types of Computer Networks - Division Based on Types of Communication
+
+ Point To Point networks: Point-to-Point networking is a type of data networking
+
+that establishes a direct link between two networking nodes. A direct link between
+
+two devices, such as a computer and a printer, is known as a point-to-point
+
+connection.
+
+ Multipoint: is the one in which more than two specific devices share links. In the
+
+multipoint environment, the capacity of the channel is shared, either spatially or
+
+temporally. If several devices can use the link simultaneously, it is a spatially
+
+shared connection.
+
+ Broadcast networks: In broadcast networks, a signal method in which numerous
+
+parties can hear a single sender. Radio stations are an excellent illustration of the
+
+“Broadcast Network” in everyday life. The radio station is a sender of data /
+
+signal in this scenario, and data is only intended to travel in one direction. Away
+
+from the radio transmission tower, to be precise.
+
+
+
+Types of computer network 
+
+ Types of Computer Networks - Division Based on the Type of Architecture
+
+ P2P Networks: Computers with similar capabilities and configurations are
+
+referred to as peers. The “peers” in a peer-to-peer network are computer systems
+
+that are connected to each other over the Internet. Without the use of a central
+
+server, files can be shared directly between systems on the network.
+
+ Client-Server Networks: Each computer or process on the network is either a
+
+client or a server in a client-server architecture (client/server). The client asks for
+
+services from the server, which the server provides. Servers are high-performance
+
+computers or processes that manage disc drives (file servers), printers (print
+
+servers), or network traffic (network servers)
+
+ Hybrid Networks: The hybrid model uses a combination of client-server and peer-
+
+to-peer architecture. For example: Torrent.
+
+
+
+Network Topology
+
+ What is Network Topology?
+
+ The structure of the network and how each component is connected to the others
+
+are defined by the network topology. Different types of network topology are
+
+mentioned below:
+
+ Bus Topology
+
+ Ring Topology
+
+ Star Topology
+
+ Mesh Topology
+
+ Tree Topology
+
+
+
+Network Topology
+
+ Bus Topology
+
+ Every computer and network device is connected to a single cable in a bus
+
+topology network. Linear Bus topology is defined as having exactly two
+
+terminals.
+
+Advantages
+
+ Installation is simple
+
+ Compared to mesh, star, and tree topologies, the bus utilizes less cabling
+
+Disadvantages
+
+ Difficulty in reconfiguring and isolating faults
+
+ A bus cable malfunction or break interrupts all communication
+
+
+
+Network Topology
+
+ Ring Topology
+
+ The topology is named ring topology because one computer is connected to
+
+another, with the final one being connected to the first. Exactly two neighbors for
+
+each device. A signal is passed along the ring in one direction. Each ring
+
+incorporates a repeater.
+
+Advantages
+
+ Data transmission is relatively straightforward because
+
+packets only move in one direction
+
+ There is no requirement for a central controller to manage communication
+
+between nodes
+
+ Easy installation & Reconfiguration and Simplified Faulty connections
+
+Disadvantages
+
+ In a Unidirectional Ring, a data packet must traverse through all nodes
+
+ All computers must be turned on in order for them to connect with one another
+
+
+
+Network Topology
+ Star Topology
+
+ Each device in a star topology has a dedicated point-to-point link to a central
+
+controller, which is commonly referred to as the HUB. There is no direct
+
+connection between the devices. Traffic between the devices is not allowed in this
+
+topology. As an exchange, the controller is used.
+
+Advantages
+
+ When attaching or disconnecting devices, there are no network interruptions
+
+ It’s simple to set up and configure; Identifying and isolating faults is simple
+
+ Less Expensive than mesh and Easy to install & configure
+
+Disadvantages
+
+ Nodes attached to the hub, switch, or concentrator is failed if they fail
+
+ Because of the expense of the hubs, it is more expensive than linear bus
+topologies
+
+ More cable is required compared to a bus or ring; Too much dependency on Hub
+
+
+
+Network Topology
+
+ Mesh Topology
+
+ Every device in a mesh topology has dedicated point-to-point connectivity to
+
+every other device. The term “dedicated” refers to the fact that the link
+
+exclusively transports data between the two devices it links. To connect n devices,
+
+a fully connected mesh network contains n*(n-1)/2 physical channels.
+
+Advantages
+
+ This topology can handle a lot of traffic.
+
+ Even if one of the connections fails, a backup is always available. As a result, data
+transit is unaffected.
+
+ Physical boundaries prevent other users from gaining access to messages.
+
+ Point to Point links make fault transmission & fault isolation easy.
+
+Disadvantages
+
+ The amount of cabling and the number of I/O ports that are necessary.
+
+ It is difficult to install and reconfigure.
+
+
+
+Network Topology
+
+ Tree Topology
+
+ The topology of a tree is similar to that of a star. Nodes in a tree, like those in a
+
+star, are connected to a central hub that manages network traffic. It has a root
+
+node, which is connected to all other nodes, producing a hierarchy. Hierarchical
+
+topology is another name for it. The number of Star networks is connected via
+
+Bus in Tree Topology.
+
+Advantages
+
+ Network expansion is both possible and simple.
+
+ We partition the entire network into pieces (star networks) that are easier to
+manage and maintain.
+
+ Other segments are unaffected if one segment is damaged.
+
+Disadvantages
+
+ Tree topology relies largely on the main bus cable because of its basic structure,
+and if it fails, the entire network is handicapped.
+
+ Maintenance becomes more challenging when more nodes and segments are
+added.
+
+
+
+Reference Models / Network Architecture
+
+Reference Models (Network Architectures):
+
+ OSI reference model
+
+ TCP / IP reference Model
+
+
+
+Reference Models / Network Architecture 
+
+ OSI stands for Open Systems Interconnection. The OSI model, created in 1984 by
+
+ISO, is a reference framework that explains the process of transmitting data
+
+between computers. It is divided into seven layers that work together to carry out
+
+specialised network functions, allowing for a more systematic approach to
+
+networking.
+
+
+
+Reference Models / Network Architecture 
+
+ Physical Layer – Layer 1
+
+ The lowest layer of the OSI reference model is the physical layer. It is responsible
+
+for the actual physical connection between the devices. The physical layer
+
+contains information in the form of bits. It is responsible for transmitting
+
+individual bits from one node to the next. When receiving data, this layer will get
+
+the signal received and convert it into 0s and 1s and send them to the Data Link
+
+layer, which will put the frame back together.
+
+
+
+Reference Models / Network Architecture 
+
+Functions of the Physical Layer
+
+ Bit Synchronization: The physical layer provides the synchronization of the bits
+
+by providing a clock. This clock controls both sender and receiver thus providing
+
+synchronization at the bit level.
+
+ Bit Rate Control: The Physical layer also defines the transmission rate i.e. the
+
+number of bits sent per second.
+
+ Physical Topologies: Physical layer specifies how the different, devices/nodes are
+
+arranged in a network i.e. bus, star, or mesh topology.
+
+ Transmission Mode: Physical layer also defines how the data flows between the
+
+two connected devices. The various transmission modes possible are Simplex,
+
+half-duplex and full-duplex.
+
+
+
+Reference Models / Network Architecture 
+
+ Data Link Layer (DLL) – Layer 2
+
+ The data link layer is responsible for the node-to-node delivery of the message.
+
+The main function of this layer is to make sure data transfer is error-free from one
+
+node to another, over the physical layer. When a packet arrives in a network, it is
+
+the responsibility of the DLL to transmit it to the Host using its MAC address.
+
+
+
+Reference Models / Network Architecture 
+ Functions of the Data Link Layer
+
+ Framing: Framing is a function of the data link layer. It provides a way for a
+
+sender to transmit a set of bits that are meaningful to the receiver. This can be
+
+accomplished by attaching special bit patterns to the beginning and end of the
+
+frame.
+
+ Physical Addressing: After creating frames, the Data link layer adds physical
+
+addresses (MAC addresses) of the sender and/or receiver in the header of each
+
+frame.
+
+ Error Control: The data link layer provides the mechanism of error control in
+which it detects and retransmits damaged or lost frames.
+
+ Flow Control: The data rate must be constant on both sides else the data may get
+corrupted thus, flow control coordinates the amount of data that can be sent before
+receiving an acknowledgment.
+
+ Access Control: When a single communication channel is shared by multiple
+
+devices, the MAC sub-layer of the data link layer helps to determine which device
+
+has control over the channel at a given time.
+
+
+
+Reference Models / Network Architecture 
+
+ Network Layer – Layer 3
+
+ The network layer works for the transmission of data from one host to the other
+
+located in different networks. It also takes care of packet routing i.e. selection of
+
+the shortest path to transmit the packet, from the number of routes available. The
+
+sender & receiver’s IP addresses are placed in the header by the network layer.
+
+
+
+Reference Models / Network Architecture 
+
+ Functions of the Network Layer
+
+ Routing: The network layer protocols determine which route is suitable from
+
+source to destination. This function of the network layer is known as routing.
+
+ Logical Addressing: To identify each device inter-network uniquely, the network
+
+layer defines an addressing scheme. The sender & receiver’s IP addresses are
+
+placed in the header by the network layer. Such an address distinguishes each
+
+device uniquely and universally.
+
+
+
+Reference Models / Network Architecture 
+
+ Transport Layer – Layer 4
+
+ The transport layer provides services to the application layer and takes services
+
+from the network layer. The data in the transport layer is referred to as Segments.
+
+It is responsible for the end-to-end delivery of the complete message. The
+
+transport layer also provides the acknowledgment of the successful data
+
+transmission and re-transmits the data if an error is found.
+
+ At the sender’s side: The transport layer receives the formatted data from the
+
+upper layers, performs Segmentation, and also implements Flow and error control
+
+to ensure proper data transmission. It also adds Source and Destination port
+
+numbers in its header and forwards the segmented data to the Network Layer.
+
+ At the receiver’s side: Transport Layer reads the port number from its header and
+
+forwards the Data which it has received to the respective application. It also
+
+performs sequencing and reassembling of the segmented data.
+
+
+
+Reference Models / Network Architecture 
+
+ Functions of the Transport Layer
+
+• Segmentation and Reassembly: This layer accepts the message from the (session) 
+
+layer, and breaks the message into smaller units. Each of the segments produced 
+
+has a header associated with it. The transport layer at the destination station 
+
+reassembles the message.
+
+• Service Point Addressing: To deliver the message to the correct process, the 
+
+transport layer header includes a type of address called service point address or 
+
+port address. Thus by specifying this address, the transport layer makes sure that 
+
+the message is delivered to the correct process.
+
+
+
+Reference Models / Network Architecture 
+
+Services Provided by Transport Layer
+
+ 1. Connection-Oriented Service: It is a three-phase process that includes:
+
+• Connection Establishment
+
+• Data Transfer
+
+• Termination/disconnection
+
+In this type of transmission, the receiving device sends an acknowledgment, back to
+
+the source after a packet or group of packets is received. This type of transmission is
+
+reliable and secure.
+
+ 2. Connectionless service: It is a one-phase process and includes Data Transfer. In
+
+this type of transmission, the receiver does not acknowledge receipt of a packet.
+
+This approach allows for much faster communication between devices.
+
+Connection-oriented service is more reliable than connectionless Service.
+
+
+
+Reference Models / Network Architecture 
+
+ Session Layer – Layer 5
+
+ This layer is responsible for the establishment of connection, maintenance of
+
+sessions, and authentication, and also ensures security.
+
+ Functions of the Session Layer
+
+ Session Establishment, Maintenance, and Termination: The layer allows the two
+
+processes to establish, use, and terminate a connection.
+
+ Synchronization: This layer allows a process to add checkpoints that are
+
+considered synchronization points in the data. These synchronization points help
+
+to identify the error so that the data is re-synchronized properly, and ends of the
+
+messages are not cut prematurely and data loss is avoided.
+
+ Dialog Controller: The session layer allows two systems to start communication
+
+with each other in half-duplex or full-duplex.
+
+
+
+Reference Models / Network Architecture
+
+ Presentation Layer – Layer 6
+
+ The presentation layer is also called the Translation layer. The data from the
+
+application layer is extracted here and manipulated as per the required format to
+
+transmit over the network.
+
+ Functions of the Presentation Layer
+
+ Translation: For example, ASCII to EBCDIC.
+
+ Encryption/ Decryption: Data encryption translates the data into another form or
+
+code. The encrypted data is known as the ciphertext and the decrypted data is
+
+known as plain text. A key value is used for encrypting as well as decrypting data.
+
+ Compression: Reduces the number of bits that need to be transmitted on the
+
+network.
+
+
+
+Reference Models / Network Architecture
+
+ Application Layer – Layer 7
+
+ At the very top of the OSI Reference Model stack of layers, we find the
+
+Application layer which is implemented by the network applications. These
+
+applications produce the data to be transferred over the network. This layer also
+
+serves as a window for the application services to access the network and for
+
+displaying the received information to the user.
+
+ Example: Application – Browsers, Skype Messenger, etc.
+
+
+
+Reference Models / Network Architecture
+
+ Functions of the Application Layer
+
+ Network Virtual Terminal(NVT): It allows a user to log on to a remote host.
+
+ File Transfer Access and Management(FTAM): This application allows a user to
+
+access files in a remote host, retrieve files in a remote host, and manage or control
+
+files from a remote computer.
+
+ Mail Services: Provide email service.
+
+ Directory Services: This application provides distributed database sources and
+
+access for global information about various objects and services.
+
+
+
+Reference Models / Network Architecture 
+
+OSI vs TCP/IP Model
+
+ TCP/IP protocol ( Transfer Control Protocol/Internet Protocol ) was created by
+
+U.S. Department of Defense’s Advanced Research Projects Agency (ARPA) in
+
+1970s.
+
+
+
+Reference Models / Network Architecture 
+
+Some key differences between the OSI model and the TCP/IP Model are:
+
+ TCP/IP model consists of 4 layers but OSI model has 7 layers. Layers 5,6,7 of the
+
+OSI model are combined into the Application Layer of TCP/IP model and OSI
+
+layers 1 and 2 are combined into Network Access Layers of TCP/IP protocol.
+
+ The TCP/IP model is older than the OSI model, hence it is a foundational protocol
+
+that defines how should data be transferred online.
+
+ Compared to the OSI model, the TCP/IP model has less strict layer boundaries.
+
+ All layers of the TCP/IP model are needed for data transmission but in the OSI
+
+model, some applications can skip certain layers. Only layers 1,2 and 3 of the OSI
+
+model are necessary for data transmission.
+
+
+
+Reference Models / Network Architecture 
+Advantages of OSI Model
+
+ It divides network communication into 7 layers which makes it easier to
+understand and troubleshoot.
+
+ It standardizes network communications, as each layer has fixed functions and
+protocols.
+
+ Diagnosing network problems is easier with the OSI model.
+
+ It is easier to improve with advancements as each layer can get updates
+separately.
+
+Disadvantages of OSI Model
+
+ Complexity: The OSI Model has seven layers, which can be complicated and hard
+to understand for beginners.
+
+ Not Practical: In real-life networking, most systems use a simpler model called
+the Internet protocol suite (TCP/IP), so the OSI Model isn’t always directly
+applicable.
+
+ Slow Adoption: When it was introduced, the OSI Model was not quickly adopted
+by the industry, which preferred the simpler and already-established TCP/IP
+model.
+
+ Overhead: Each layer in the OSI Model adds its own set of rules and operations,
+which can make the process more time-consuming and less efficient.
+
+ Theoretical: The OSI Model is more of a theoretical framework, meaning it’s
+great for understanding concepts but not always practical for implementation.
+
+
+
+Reference Models / Network Architecture 
+
+ TCP / IP reference Model
+
+ The TCP/IP model is a fundamental framework for computer networking. It
+
+stands for Transmission Control Protocol/Internet Protocol, which are the core
+
+protocols of the Internet. This model defines how data is transmitted over
+
+networks, ensuring reliable communication between devices.
+
+Layers of TCP/IP Model
+
+ Application Layer
+
+ Transport Layer(TCP/UDP)
+
+ Network/Internet Layer(IP)
+
+ Network Access Layer
+
+Each layer has specific functions that help manage different aspects of network
+
+communication, making it essential for understanding and working with modern
+
+networks.
+
+
+
+Reference Models / Network Architecture 
+
+ 1. Network Access Layer
+
+ It is a group of applications requiring network communications. This layer is
+
+responsible for generating the data and requesting connections. It acts on behalf of
+
+the sender and the Network Access layer on the behalf of the receiver.
+
+ The packet’s network protocol type, in this case, TCP/IP, is identified by network
+
+access layer. Error prevention and “framing” are also provided by this layer.
+
+Point-to-Point Protocol (PPP) framing and Ethernet IEEE 802.2 framing are two
+
+examples of data-link layer protocols.
+
+
+
+Reference Models / Network Architecture
+
+ 2. Internet Layer
+
+ This layer parallels the functions of OSI’s Network layer. It defines the protocols
+
+which are responsible for the logical transmission of data over the entire network.
+
+ The main protocols residing at Internet layer (IP, ICMP, ARP) are as follows:
+
+ IP: IP stands for Internet Protocol and it is responsible for delivering packets from
+
+the source host to the destination host by looking at the IP addresses in the packet
+
+headers. IP has 2 versions: IPv4 and IPv6. IPv4 is the one that most websites are
+
+using currently. But IPv6 is growing as the number of IPv4 addresses is limited in
+
+number when compared to the number of users.
+
+
+
+Reference Models / Network Architecture
+
+ The main protocols residing at Internet layer are as follows:
+
+ ICMP: ICMP stands for Internet Control Message Protocol. It is encapsulated
+
+within IP datagrams and is responsible for providing hosts with information about
+
+network problems.
+
+ ARP: ARP stands for Address Resolution Protocol. Its job is to find the hardware
+
+address of a host from a known IP address. ARP has several types: Reverse ARP,
+
+Proxy ARP, Gratuitous ARP, and Inverse ARP.
+
+ The Internet Layer is a layer in the Internet Protocol (IP) suite, which is the set of
+
+protocols that define the Internet. The Internet Layer is responsible for routing
+
+packets of data from one device to another across a network. It does this by
+
+assigning each device a unique IP address, which is used to identify the device
+
+and determine the route that packets should take to reach it.
+
+
+
+Reference Models / Network Architecture
+
+ 3. Transport Layer
+
+ The TCP/IP transport layer protocols exchange data receipt acknowledgments and
+
+retransmit missing packets to ensure that packets arrive in order and without error.
+
+End-to-end communication is referred to as such. Transmission Control Protocol
+
+(TCP) and User Datagram Protocol are transport layer protocols at this level
+
+(UDP).
+
+
+
+Reference Models / Network Architecture
+
+ TCP: Applications can interact with one another using TCP as though they were
+
+physically connected by a circuit. TCP transmits data in a way that resembles
+
+character-by-character transmission rather than separate packets. A starting point
+
+that establishes the connection, the whole transmission in byte order, and an
+
+ending point that closes the connection make up this transmission.
+
+ UDP: The datagram delivery service is provided by UDP, the other transport layer
+
+protocol. Connections between receiving and sending hosts are not verified by
+
+UDP. Applications that transport little amounts of data use UDP rather than TCP
+
+because it eliminates the processes of establishing and validating connections.
+
+
+
+Reference Models / Network Architecture 
+
+ 4. Application Layer
+
+ This layer is analogous to the transport layer of the OSI model. It is responsible
+
+for end-to-end communication and error-free delivery of data. It shields the upper-
+
+layer applications from the complexities of data.
+
+ The three main protocols present in this layer are (HTTP / HTTPS, SSH, NTP) :
+
+ HTTP and HTTPS: HTTP stands for Hypertext transfer protocol. It is used by the
+
+World Wide Web to manage communications between web browsers and servers.
+
+HTTPS stands for HTTP-Secure. It is a combination of HTTP with SSL(Secure
+
+Socket Layer). It is efficient in cases where the browser needs to fill out forms,
+
+sign in, authenticate, and carry out bank transactions.
+
+
+
+Reference Models / Network Architecture 
+
+ The main protocols present in Application layer are:
+
+ SSH: SSH stands for Secure Shell. It is a terminal emulations software similar to
+
+Telnet. The reason SSH is preferred is because of its ability to maintain the
+
+encrypted connection. It sets up a secure session over a TCP/IP connection.
+
+ NTP: NTP stands for Network Time Protocol. It is used to synchronize the clocks
+
+on our computer to one standard time source. It is very useful in situations like
+
+bank transactions. Assume the following situation without the presence of NTP.
+
+Suppose you carry out a transaction, where your computer reads the time at 2:30
+
+PM while the server records it at 2:28 PM. The server can crash very badly if it’s
+
+out of sync.
+
+
+
+Reference Models / Network Architecture
+
+ Difference between TCP/IP and OSI Model
+
+TCP/IP OSI
+
+TCP refers to Transmission Control Protocol. OSI refers to Open Systems Interconnection.
+
+TCP/IP uses both the session and presentation
+OSI uses different session and presentation layers.
+
+layer in the application layer itself.
+
+TCP/IP follows connectionless a horizontal
+OSI follows a vertical approach.
+
+approach.
+
+The Transport layer in TCP/IP does not provide In the OSI model, the transport layer provides
+assurance delivery of packets. assurance delivery of packets.
+
+While in the OSI model, Protocols are better
+Protocols cannot be replaced easily in TCP/IP
+
+covered and are easy to replace with the technology
+model.
+
+change.
+
+TCP/IP model network layer only provides
+Connectionless and connection-oriented services
+
+connectionless (IP) services. The transport layer
+are provided by the network layer in the OSI model.
+
+(TCP) provides connections.
+
+
+
+Reference Models / Network Architecture 
+
+Advantages of TCP/IP Model
+
+ Interoperability: The TCP/IP model allows different types of computers and
+networks to communicate with each other, promoting compatibility and
+cooperation among diverse systems.
+
+ Scalability: TCP/IP is highly scalable, making it suitable for both small and large
+networks, from local area networks (LANs) to wide area networks (WANs) like
+the internet.
+
+ Standardization: It is based on open standards and protocols, ensuring that
+different devices and software can work together without compatibility issues.
+
+ Flexibility: The model supports various routing protocols, data types, and
+communication methods, making it adaptable to different networking needs.
+
+ Reliability: TCP/IP includes error-checking and retransmission features that
+ensure reliable data transfer, even over long distances and through various
+network conditions.
+
+
+
+Reference Models / Network Architecture
+
+ Disadvantages of TCP/IP Model
+
+ Complex Configuration: Setting up and managing a TCP/IP network can be
+complex, especially for large networks with many devices. This complexity can
+lead to configuration errors.
+
+ Security Concerns: TCP/IP was not originally designed with security in mind.
+While there are now many security protocols available (such as SSL/TLS), they
+have been added on top of the basic TCP/IP model, which can lead to
+vulnerabilities.
+
+ Inefficiency for Small Networks: For very small networks, the overhead and
+complexity of the TCP/IP model may be unnecessary and inefficient compared to
+simpler networking protocols.
+
+ Limited by Address Space: Although IPv6 addresses this issue, the older IPv4
+system has a limited address space, which can lead to issues with address
+exhaustion in larger networks.
+
+ Data Overhead: TCP, the transport protocol, includes a significant amount of
+overhead to ensure reliable transmission. This can reduce efficiency, especially
+for small data packets or in networks where speed is crucial.
+
+
+
+Prof. Dr. SHAKTI KUNDU
+
+Computer Networks and Data Communication
+
+2026

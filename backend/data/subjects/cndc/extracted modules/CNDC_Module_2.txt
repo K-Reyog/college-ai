@@ -1,0 +1,467 @@
+﻿Computer Networks and Data 
+Communication
+
+Module 2
+
+CS 212
+
+Prof. (Dr.) SHAKTI KUNDU
+
+Jan-May 2026
+
+
+
+Module wise CONTENTS:
+ Module 1 - Introduction: An overview of networks, the Internet, services and protocols, RFCs 
+
+and standards of Networking, Data communication & its components, types of data 
+communication and communication channels. Key components of computer network; network 
+devices; types of computer networks; network topology; reference models (Network 
+Architectures) – OSI & TCP/IP.
+
+ Module 2 - Physical Layer: Introduction and functions; types of transmission media – guided 
+and unguided; integrated services digital network (ISDN); asynchronous transfer mode (ATM).
+
+ Module 3 - Data Link Layer: Overview; sliding window protocols - Stop-&-Wait; Go-Back-N,
+Selective Repeat; Error detection and correction; Hamming Code, LRC, VRC, CRC,
+Checksum, Round Trip Time, Latency (Delay); Medium Access Sublayer: medium access
+control (MAC) Addresses; Switching techniques - circuit, message & packet; Random Access
+Protocols - Pure ALOHA, Slotted ALOHA, CSMA / CD, CSMA / CA; Controlled Access
+Protocols – FDMA, TDMA, CDMA; Channelization Protocols – Reservation, Polling, Token
+Passing; Ethernet (802.3 IEEE standard), Wireless Links, Wireless LAN - WiFi (802.11).
+
+ Module 4 - Network Layer: Introduction; address resolution protocol (ARP); internet protocol
+(IP); internet control message protocol (ICMP); internet group management protocol (IGMP);
+IPv4 addressing, representation of IPv6; IPv4 vs IPv6; Conversion IPv4 to IPv6; Routing
+Protocols - routing information protocol (RIP), open shortest path first (OSPF); border gateway
+protocol (BGP); Enhanced Interior Gateway Routing Protocol (EIGRP).
+
+ Module 5 - Transport Layer: Introduction; transport layer protocols - UDP & TCP, TCP
+connection establishment; TCP connection termination; TCP congestion control. Application
+Layer: Introduction – features & functions; application layer protocols; Web and HTTP, Email,
+P2P network, its types & applications.
+
+ Module 6 – Network Optimization, Mathematical Models, Introduction Advance Computer
+Networks, MANET, WSN, PCN, SDN, IoT.
+
+
+
+ Module 2 - Physical Layer: Introduction and functions; types of transmission 
+media – guided and unguided; integrated services digital network (ISDN); 
+asynchronous transfer mode (ATM).
+
+
+
+Physical Layer: Introduction
+
+ Physical Layer: The physical Layer is the bottom-most layer in the Open
+
+System Interconnection (OSI) Model which is a physical and electrical
+
+representation of the system.
+
+ It consists of various network components such as power plugs,
+
+connectors, receivers, cable types, etc.
+
+ The physical layer sends data bits from one device(s) (like a computer) to
+
+another device(s).
+
+ The physical Layer defines the types of encoding (that is how the 0’s and
+
+1’s are encoded in a signal).
+
+ The physical Layer is responsible for the communication of the
+
+unstructured raw data streams over a physical medium.
+
+
+
+Physical Layer: Functions
+
+ Functions performed by Physical Layer
+
+ The physical layer maintains the data rate (how many bits a sender can
+send per second).
+
+ It performs the Synchronization of bits.
+
+ It helps in Transmission Medium decisions (direction of data transfer).
+
+ It helps in Physical Topology (Mesh, Star, Bus, Ring) decisions (Topology
+through which we can connect the devices with each other).
+
+ It helps in providing Physical Medium and Interface decisions.
+
+ It provides two types of configuration Point to Point configuration and
+Multi-Point configuration.
+
+ It provides an interface between devices (like PCs or computers) and
+transmission medium.
+
+ It has a protocol data unit in bits.
+
+ Hubs, Ethernet, etc. device is used in this layer.
+
+
+
+Physical Layer: Functions
+
+ This layer comes under the category of Hardware Layers (since the
+
+hardware layer is responsible for all the physical connection establishment
+
+and processing too).
+
+ It provides an important aspect called Modulation, which is the process of
+
+converting the data into radio waves by adding the information to an
+
+electrical or optical nerve signal.
+
+ It also provides a Switching mechanism wherein data packets can be
+
+forwarded from one port (sender port) to the leading destination port.
+
+
+
+Types of Transmission media
+
+ 1. Guided Media: In this transmission medium, the physical link is created using
+
+wires or cables between two or more computers or devices, and then the data is
+
+transmitted using these cables in terms of signals. Guided media transmission of
+
+the following types:
+
+ 1. Twisted pair cable: It is the most common form of wire used in communication.
+
+In a twisted-pair cable, two identical wires are wrapped together in a double helix.
+
+The twisting of the wire reduces the crosstalk. It is known as the leaking of a
+
+signal from one wire to another due to which signal can corrupt and can cause
+
+network errors. The twisting protects the wire from internal crosstalk as well as
+
+external forms of signal interference. Types of Twisted Pair Cable:
+
+ Unshielded Twisted Pair (UTP): It is used in computers and telephones widely.
+As the name suggests, there is no external shielding, so it does not protect from
+external interference. It is cheaper than STP.
+
+ Shielded Twisted Pair (STP): It offers greater protection from crosstalk due to
+shield. Due to shielding, it protects from external interference. It is heavier and
+costlier as compared to UTP.
+
+
+
+Types of Transmission media
+
+ 2. Coaxial Cable: It consists of a solid wire core that is surrounded by one or more
+
+foil or wire shields. The inner core of the coaxial cable carries the signal and the
+
+outer shield provides the ground. It is widely used for television signals and also
+
+used by large corporations in building security systems. Data transmission of this
+
+cable is better but expensive as compared to twisted pair.
+
+ 3. Optical fibers: Optical fiber is an important technology. It transmits large
+
+amounts of data at very high speeds due to which it is widely used in internet
+
+cables. It carries data as a light that travels inside a thin glass fiber. The fiber optic
+
+cable is made up of three pieces:
+
+ Core: Core is the piece through which light travels. It is generally created using
+
+glass or plastic.
+
+ Cladding: It is the covering of the core and reflects the light back to the core.
+
+ Sheath: It is the protective covering that protects fiber cable from the
+
+environment.
+
+
+
+Types of Transmission media
+
+ 2. Unguided Media: The unguided transmission media is a transmission mode in
+
+which the signals are propagated from one device to another device wirelessly.
+
+Signals can wave through the air, water, or vacuum. It is generally used to
+
+transmit signals in all directions. Unguided Media is further divided into various
+
+parts:
+
+ 1. Microwave: Microwave offers communication without the use of cables.
+Microwave signals are just like radio and television signals. It is used in long-
+distance communication. Microwave transmission consists of a transmitter,
+receiver, and atmosphere. In microwave communication, there are parabolic
+antennas that are mounted on the towers to send a beam to another antenna. The
+higher the tower, the greater the range.
+
+ 2. Radio wave: When communication is carried out by radio frequencies, then it is
+termed radio waves transmission. It offers mobility. It is consists of the
+transmitter and the receiver. Both use antennas to radiate and capture the radio
+signal.
+
+ 3. Infrared: It is short-distance communication and can pass through any object. It
+is generally used in TV remotes, wireless mouse, etc.
+
+
+
+Integrated services digital network (ISDN)
+
+ ISDN is employed as the network in data-link and physical layers but
+commonly ISDN is often limited to usage to Q.931 and related protocols.
+These protocols introduced in 1986 are a set of signaling protocols
+establishing and breaking circuit-switched connections, and for advanced
+calling features for the user.
+
+ ISDN provides simultaneous voice, video, and text transmission between
+individual desktop videoconferencing systems and group
+videoconferencing systems.
+
+ Principle of ISDN:
+
+ To support switched and non-switched applications
+
+ To support voice and non-voice applications
+
+ Reliance on 64-kbps connections
+
+ Intelligence in the network
+
+ Layered protocol architecture
+
+ Variety of configurations
+
+
+
+Integrated services digital network (ISDN)
+
+ ISDN Interfaces: The following are the interfaces of ISDN: 
+
+Basic Rate Interface (BRI)
+
+ There are two data-bearing channels (‘B’ channels) and one signaling
+channel (‘D’ channel) in BRI to initiate connections.
+
+ The B channels operate at a maximum of 64 Kbps while the D channel
+operates at a maximum of 16 Kbps.
+
+ The two channels are independent of each other. For example, one channel
+is used as a TCP/IP connection to a location while the other channel is
+used to send a fax to a remote location. In iSeries ISDN supports a basic
+rate interface (BRl).
+
+ The basic rate interface (BRl) specifies a digital pipe consisting of two B
+channels of 64 Kbps each and one D channel of 16 Kbps. This equals a
+speed of 144 Kbps.
+
+ In addition, the BRl service itself requires an operating overhead of 48
+Kbps. Therefore, a digital pipe of 192 Kbps is required.
+
+
+
+Integrated services digital network (ISDN)
+
+Primary Rate Interface (PRI)
+
+ Primary Rate Interface service consists of a D channel and either 23 or 30
+B channels depending on the country you are in. PRI is not supported on
+the iSeries.
+
+ A digital pipe with 23 B channels and one 64 Kbps D channel is present in
+the usual Primary Rate Interface (PRI). Twenty-three B channels of 64
+Kbps each and one D channel of 64 Kbps equals 1.536 Mbps.
+
+ The PRI service uses 8 Kbps of overhead also. Therefore, PRI requires a
+digital pipe of 1.544 Mbps.
+
+Broadband-ISDN (B-ISDN)
+
+ Narrowband ISDN has been designed to operate over the current
+communications infrastructure, which is heavily dependent on the copper
+cable however B-ISDN relies mainly on the evolution of fiber optics.
+According to CCITT B-ISDN is best described as ‘a service requiring
+transmission channels capable of supporting rates greater than the primary
+rate.
+
+
+
+Integrated services digital network (ISDN)
+
+ ISDN Services:
+
+Bearer Services
+
+ Transfer of information (voice, data, and video) between users without the
+network manipulating the content of that information is provided by the
+bearer network.
+
+ There is no need for the network to process the information and therefore
+does not change the content.
+
+ Bearer services belong to the first three layers of the OSI model. They are
+well defined in the ISDN standard. They can be provided using circuit-
+switched, packet-switched, frame-switched, or cell-switched networks.
+
+Teleservices
+
+ In this, the network may change or process the contents of the data. These
+services correspond to layers 4-7 of the OSI model. Teleservices rely on
+the facilities of the bearer services and are designed to accommodate
+complex user needs. The user need not be aware of the details of the
+process.
+
+ Teleservices include telephony, teletex, telefax, videotex, telex, and
+teleconferencing. Though the ISDN defines these services by name yet
+they have not yet become standards.
+
+
+
+Integrated services digital network (ISDN)
+
+ ISDN Services:
+
+Supplementary Service
+
+ Additional functionality to the bearer services and teleservices are
+provided by supplementary services.
+
+ Reverse charging, call waiting, and message handling are examples of
+supplementary services which are all familiar with today’s telephone
+company services.
+
+
+
+Asynchronous transfer mode (ATM)
+
+ Asynchronous Transfer Mode (ATM) is a networking technology that can
+be used in many real-world scenarios, including:
+
+ Telecommunications
+
+ ATM is often used in the telecommunications industry because it can
+transmit voice, video, and data over the same network. It's also a good
+choice for commercial broadcasting due to its real-time transmission
+capabilities.
+
+ Wide Area Networks (WAN)
+
+ ATM's high-speed data transmission capabilities make it a good
+choice for WANs, especially as the backbone network.
+
+ Multimedia streaming, video conferencing, and telecommunications
+infrastructure
+
+ ATM's ability to integrate voice, video, and data on a single network,
+along with its prioritization features for real-time applications, makes
+it a preferred choice in these environments.
+
+ ATM is a connection-oriented network for cell relay that encodes data into
+small, fixed-size cells so that they can be transmitted over a physical
+medium. It's a streamlined protocol with minimal error and flow control
+capabilities, which allows it to operate at high data rates.
+
+
+
+Asynchronous transfer mode (ATM)
+
+ Asynchronous Transfer Mode (ATM): It is an International
+Telecommunication Union- Telecommunications Standards Section (ITU-
+T) efficient for call relay and it transmits all information including
+multiple service types such as data, video, or voice which is conveyed in
+small fixed-size packets called cells.
+
+ Cells are transmitted asynchronously and the network is connection-
+oriented.
+
+ ATM is a technology that has some event in the development of
+broadband ISDN in the 1970s and 1980s, which can be considered an
+evolution of packet switching.
+
+ Each cell is 53 bytes long – 5 bytes header and 48 bytes payload. Making
+an ATM call requires first sending a message to set up a connection.
+
+
+
+Asynchronous transfer mode (ATM)
+ Subsequently, all cells follow the same path to the destination.
+
+ It can handle both constant rate traffic and variable rate traffic. Thus, it can
+carry multiple types of traffic with end-to-end quality of service.
+
+ ATM is independent of a transmission medium, they may be sent on a
+wire or fiber by themselves, or they may also be packaged inside the
+payload of other carrier systems.
+
+ ATM networks use “Packet” or “cell” Switching with virtual circuits. Its
+design helps in the implementation of high-performance multimedia
+networking.
+
+ ATM Cell Format
+
+ As information is transmitted in ATM in the form of fixed-size units
+called cells. As known already each cell is 53 bytes long which
+consists of a 5 bytes header and 48 bytes payload.
+
+
+
+Asynchronous transfer mode (ATM)
+
+ Asynchronous Transfer Mode can be of two format types which are as
+follows:
+
+ UNI – Universal Network Interface - for communication between ATM endpoints
+and ATM switches.
+
+ NNI – Network to Network Interface - for communication between ATM switches.
+
+ GFC – Generic Flow Control
+
+ VPI – Virtual Path Identifier
+
+ VCI – Virtual circuit Identifier – numerical value that identifies virtual circuit in
+computer network.
+
+ PT – Penetrating Testing – to check for vulnerabilities.
+
+ CLP – Cell Loss Priority – it indicates how a cell is treated if network is congested.
+
+ HEC – High End Computing – anticipate future needs, overcome current
+challenges, and, effective use of system.
+
+
+
+Asynchronous transfer mode (ATM)
+
+ Asynchronous Transfer Mode can be of two format types which are as
+follows:
+
+ UNI (User Network Interface) Header: This is used within private
+networks of ATMs for communication between ATM endpoints and ATM
+switches. It includes the Generic Flow Control (GFC) field.
+
+ NNI (Network to Network Interface) Header: is used for communication
+between ATM switches, and it does not include the Generic Flow
+Control(GFC) instead it includes a Virtual Path Identifier (VPI) which
+occupies the first 12 bits.
+
+
+
+Prof. Dr. SHAKTI KUNDU
+
+Computer Networks and Data Communication
+
+2026
