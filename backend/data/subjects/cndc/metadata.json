@@ -1,0 +1,7 @@
+{
+    "subject": "Computer Networks and Data Communication",
+    "code": "CS212",
+    "teacher": "Shakti Kundu",
+    "module_count": 6,
+    "high_priority_modules": [3, 4, 5]
+}
