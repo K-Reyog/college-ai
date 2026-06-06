@@ -1,7 +1,57 @@
 from search import search_modules
+from llm import ask_gemini
 
-question = input("Ask a CNDC question: ")
+question = input("Ask: ")
 
 results = search_modules(question)
+context = ""
 
-print(results)
+for item in results:
+    context += item["text"] + "\n\n"
+#here we build a RAG prompt for Gemini. We tell it to only answer using the study material we found, and then we give it the question. This way, we can ensure that Gemini's answer is based on the relevant content we found in the modules.
+prompt = f"""
+You are a CNDC teaching assistant helping engineering students.
+
+Use the provided study material as the primary source of truth.
+
+Your job is to teach, not just repeat notes.
+
+Rules:
+- Explain concepts in simple, student-friendly language.
+- Teach the concept directly as if you are a professor explaining it in class.
+- If asked, teach as if you are a peer explaining to another student.
+- Use the study material as the primary source of truth.
+- You may add simple examples, intuition, applications, and real-world relevance when they help understanding.
+- Stay within the scope of CNDC and closely related networking concepts.
+- Do not introduce advanced topics unless they directly help answer the question.
+- Structure answers clearly using headings and bullet points where appropriate.
+- For theoretical questions, try to include:
+  1. Definition
+  2. Working/Explanation
+  3. Advantages or Key Features
+  4. Applications (if relevant)
+  5. Exam-Relevant Points
+
+- Do not refer to "the study material", "the notes", or "the provided material" unless information is missing.
+
+- If the study material contains enough information, answer confidently.
+
+- If the study material is incomplete but the answer can be reasonably inferred from the course context, provide a brief explanation and clearly indicate that additional details are not covered in the modules.
+
+- If the answer cannot be determined from the study material and course context, say so instead of inventing information.
+
+- If the question is ambiguous, ask for clarification.
+Study Material:
+{context}
+
+Question:
+{question}
+"""
+
+answer = ask_gemini(prompt)
+
+print(answer)
+print("\nSources Used:")
+
+for item in results:
+    print(f"- {item['file']} (score: {item['score']})")
