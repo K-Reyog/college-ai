@@ -1,9 +1,40 @@
 from search import search_modules
 from llm import ask_gemini
+from datetime import datetime
+# This function logs the question asked by the user along with a timestamp. It appends the log to a file named "questions.log" in the "backend/logs" directory. Each log entry includes the timestamp, the question, and a separator line for clarity.
+def log_question(question, results):
+    
+    timestamp = datetime.now()
+
+    with open(
+        "backend/logs/questions.log",
+        "a",
+        encoding="utf-8"
+    ) as f:
+
+        f.write(
+            f"\n[{timestamp}]\n"
+        )
+
+        f.write(
+            f"Question: {question}\n"
+        )
+        f.write("Sources:\n")
+
+        for item in results:
+            f.write(
+                f"- {item['file']} "
+                f"(score: {item['score']})\n"
+            )
+        f.write(
+            "-" * 50 + "\n"
+        )
 
 question = input("Ask: ")
 
 results = search_modules(question)
+
+log_question(question, results)
 context = ""
 
 for item in results:

@@ -16,4 +16,8 @@ venv/
 .venv/
 
 
-*.log
+# Ignore log files
+backend/logs/*.log
+
+# Keep folder structure
+!backend/logs/.gitkeep
