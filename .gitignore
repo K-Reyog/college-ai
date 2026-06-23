@@ -21,3 +21,10 @@ backend/logs/*.log
 
 # Keep folder structure
 !backend/logs/.gitkeep
+
+
+# Local handoff notes (private, not shared)
+HANDOFF.md
+
+# Regeneratable embedding cache (run build_index.py to rebuild)
+backend/data/subjects/*/embeddings_index.json
